@@ -34,20 +34,20 @@ help_pages:
   - id: bdc-whats-new
     product: SAP Business Data Cloud
     title: What's New
-    url: ""   # TODO: URL der BDC-What's-New-Seite eintragen
+    url: "https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b?locale=en-US"
     wait_for: ""
   - id: sac-whats-new
     product: SAP Analytics Cloud
     title: What's New
-    url: ""   # TODO
+    url: "https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US"
     wait_for: ""
   - id: datasphere-whats-new
     product: SAP Datasphere
     title: What's New
-    url: ""   # TODO (nicht im GitHub-Spiegel enthalten)
+    url: "https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?locale=en-US"
     wait_for: ""
   - id: hana-cloud-whats-new
     product: SAP HANA Cloud
     title: What's New
-    url: ""   # TODO
+    url: "https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US"
     wait_for: ""
