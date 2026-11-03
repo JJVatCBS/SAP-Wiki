@@ -31,6 +31,10 @@ def main() -> int:
     snaps = changed("snapshots")
     notes = changed("notes/text")
     md = [f"# Änderungen KW {w}/{y}", "", f"Lauf vom {date.today().isoformat()}", ""]
+    warn = ROOT / "state" / "warnings.md"
+    if warn.exists() and "- keine" not in warn.read_text(encoding="utf-8"):
+        md += ["## Achtung: Quellen nicht vollständig abgerufen", "",
+               *warn.read_text(encoding="utf-8").splitlines()[2:], ""]
     md += ["## SAP-Hilfe aus GitHub-Spiegeln", ""]
     md += [f"- [{Path(p).parent.name} · {Path(p).stem}](../../{p})" for _, p in mirrors] or ["- keine Änderungen"]
     md += ["", "## help.sap.com-Seiten (What's New u. a.)", ""]
