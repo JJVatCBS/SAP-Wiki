@@ -1,0 +1,53 @@
+# Quellen für das SAP-Wiki
+# mirrors: offizielle Markdown-Spiegel der SAP-Hilfe auf GitHub (github.com/SAP-docs).
+#          Die Änderungshistorie kommt aus den Commits von SAP.
+# help_pages: Seiten auf help.sap.com ohne Spiegel (z. B. "What's New").
+#          Der Job rendert sie im Headless-Browser und speichert den Text unter snapshots/.
+#          Die Historie entsteht durch unsere eigenen Commits.
+
+mirrors:
+  - id: datasphere
+    product: SAP Datasphere
+    repo: https://github.com/SAP-docs/sap-datasphere.git
+    path: docs
+  - id: hana-cloud-db
+    product: SAP HANA Cloud, SAP HANA Database
+    repo: https://github.com/SAP-docs/sap-hana-cloud-hana-database.git
+    path: docs
+    note: "Spiegel seit 28.10.2025 nicht aktualisiert (Stand 03.11.2026) - zusätzlich help_pages nutzen"
+  - id: hana-cloud-data-lake
+    product: SAP HANA Cloud, Data Lake
+    repo: https://github.com/SAP-docs/sap-hana-cloud-data-lake.git
+    path: docs
+  - id: integration-suite
+    product: SAP Integration Suite
+    repo: https://github.com/SAP-docs/btp-integration-suite.git
+    path: docs
+  - id: sap-ai
+    product: SAP AI (Generative AI Hub, AI Core)
+    repo: https://github.com/SAP-docs/sap-artificial-intelligence.git
+    path: docs
+
+# URL im Browser öffnen, aus der Adresszeile kopieren und hier eintragen.
+# wait_for: CSS-Selektor, auf den gewartet wird (leer = 8 Sekunden warten).
+help_pages:
+  - id: bdc-whats-new
+    product: SAP Business Data Cloud
+    title: What's New
+    url: ""   # TODO: URL der BDC-What's-New-Seite eintragen
+    wait_for: ""
+  - id: sac-whats-new
+    product: SAP Analytics Cloud
+    title: What's New
+    url: ""   # TODO
+    wait_for: ""
+  - id: datasphere-whats-new
+    product: SAP Datasphere
+    title: What's New
+    url: ""   # TODO (nicht im GitHub-Spiegel enthalten)
+    wait_for: ""
+  - id: hana-cloud-whats-new
+    product: SAP HANA Cloud
+    title: What's New
+    url: ""   # TODO
+    wait_for: ""
