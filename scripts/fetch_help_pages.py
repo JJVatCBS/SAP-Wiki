@@ -31,6 +31,17 @@ def main() -> int:
                     page.wait_for_selector(p["wait_for"], timeout=60000)
                 else:
                     page.wait_for_timeout(8000)
+                # What's-New-Listen laden beim Scrollen bzw. per Button nach: bis zu 40 Runden
+                for _ in range(40):
+                    before = page.evaluate("document.body.innerText.length")
+                    page.mouse.wheel(0, 20000)
+                    btn = page.query_selector("button:has-text('More'), button:has-text('Load more'), "
+                                              "button:has-text('Show more')")
+                    if btn and btn.is_visible():
+                        btn.click()
+                    page.wait_for_timeout(1500)
+                    if page.evaluate("document.body.innerText.length") == before:
+                        break
                 text = page.inner_text("main") if page.query_selector("main") else page.inner_text("body")
                 lines = [l.rstrip() for l in text.splitlines()]
                 body = "\n".join(l for l in lines if l.strip())
