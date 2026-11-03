@@ -1,0 +1,49 @@
+name: SAP-Wiki Wochenlauf
+
+on:
+  schedule:
+    - cron: "17 4 * * 1"   # montags 04:17 UTC
+  workflow_dispatch:
+    inputs:
+      backfill_since:
+        description: "Nur beim ersten Lauf: Historie ab Datum (YYYY-MM-DD), sonst leer lassen"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pakete installieren
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          sudo apt-get install -y poppler-utils
+      - name: GitHub-Spiegel der SAP-Hilfe
+        run: |
+          if [ -n "${{ github.event.inputs.backfill_since }}" ]; then
+            python scripts/sync_mirrors.py --backfill-since "${{ github.event.inputs.backfill_since }}"
+          else
+            python scripts/sync_mirrors.py
+          fi
+      - name: help.sap.com-Seiten
+        run: python scripts/fetch_help_pages.py
+      - name: Notes aus notes/inbox
+        run: python scripts/ingest_note_pdfs.py
+      - name: Wochenbericht
+        run: python scripts/build_weekly_report.py
+      - name: Committen
+        run: |
+          git config user.name "sap-wiki-bot"
+          git config user.email "sap-wiki-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Wochenlauf $(date +%G-KW%V)"
+          git push
