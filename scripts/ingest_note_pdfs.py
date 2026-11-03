@@ -29,7 +29,7 @@ def parse(text: str, fallback: str) -> dict:
     head = re.search(r"^\s*(\d{6,8})\s+-\s+(.+)$", text, re.M)
     num = head.group(1) if head else (re.search(r"\d{6,8}", fallback) or [None])[0]
     ver = re.search(r"Version\s*:?\s*(\d+)", text)
-    rel = re.search(r"Release\s*Date\s*:?\s*([0-9./-]{8,10})", text)
+    rel = re.search(r"(?:Release\s*Date|Released\s*On)\s*:?\s*([0-9./-]{8,10})", text, re.I)
     return {"nummer": num or fallback,
             "titel": head.group(2).strip() if head else "",
             "version": ver.group(1) if ver else "",
