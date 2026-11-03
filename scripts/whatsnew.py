@@ -24,12 +24,21 @@ SKIP_FIELDS = {"id", "Description", "Latest_Revision", "Valid_as_Of", "Title"}
 def fetch(page, url: str, timeout_ms: int = 90000) -> tuple[list[dict], dict]:
     """Öffnet die Seite, schneidet die Datenanfrage mit und holt alle Einträge."""
     captured = {}
+    seen = []
 
-    def on_request(req):
-        if req.method == "POST" and req.url.startswith(API) and "body" not in captured:
-            captured["body"] = req.post_data
+    def on_response(resp):
+        # Die Seite schickt mehrere Anfragen an http.svc/whatsnew; gebraucht wird die mit Einträgen
+        if resp.request.method != "POST" or not resp.url.startswith(API) or "body" in captured:
+            return
+        try:
+            data = (resp.json() or {}).get("data") or {}
+        except Exception:
+            return
+        seen.append(len(data.get("results") or []))
+        if data.get("results"):
+            captured["body"] = resp.request.post_data
 
-    page.on("request", on_request)
+    page.on("response", on_response)
     try:
         page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
     except Exception:
@@ -38,32 +47,63 @@ def fetch(page, url: str, timeout_ms: int = 90000) -> tuple[list[dict], dict]:
         if "body" in captured:
             break
         page.wait_for_timeout(500)
-    page.remove_listener("request", on_request)
+    page.remove_listener("response", on_response)
     if "body" not in captured:
-        raise RuntimeError("Datenanfrage der Seite nicht gefunden (Seitenaufbau geändert?)")
+        raise RuntimeError(f"Datenanfrage mit Einträgen nicht gefunden (Antworten: {seen})")
 
-    body = json.loads(captured["body"])
+    original = json.loads(captured["body"])
+    log = {"produktfilter": [c["name"] for c in original.get("columns", [])
+                             if c.get("name", "").startswith(KEEP_FILTERS) and c.get("query")]}
+    # Varianten von "alles" bis "genau wie die Seite"; die erste mit Treffern gewinnt
+    variants = [("ohne Filter, Datum offen", True, "", 500),
+                ("ohne Filter, Datum 1900-2100", True, "wide", 500),
+                ("ohne Filter, Datum 1900-2100, 100 je Abruf", True, "wide", 100),
+                ("ohne Filter, Datum 1900-2100, 25 je Abruf", True, "wide", 25),
+                ("Original der Seite", False, None, original.get("size", 25))]
+    tried = []
+    for name, clear, dates, size in variants:
+        body = _variant(original, clear, dates)
+        results, total, note = _collect(page, body, size)
+        tried.append(f"{name}: {total}{' ' + note if note else ''}")
+        if total:
+            log.update(variante=name, gesamt_laut_sap=total, gelesen=len(results))
+            return [_entry(r) for r in results], log
+    log["versuche"] = tried
+    return [], log
+
+
+def _variant(original: dict, clear: bool, dates) -> dict:
+    body = json.loads(json.dumps(original))
+    if not clear:
+        return body
     for col in body.get("columns", []):
         if col.get("name", "").startswith(KEEP_FILTERS):
             continue
         if "query" in col:
             col["query"] = []
-        if "dateFrom" in col:
-            col["dateFrom"], col["dateTo"] = "", ""
-    log = {"produktfilter": [c["name"] for c in body["columns"]
-                             if c.get("name", "").startswith(KEEP_FILTERS) and c.get("query")]}
+        if "dateFrom" in col and col.get("name") != "Latest_Revision":
+            col["dateFrom"], col["dateTo"] = ("", "") if dates == "" else ("1900-01-01", "2100-12-31")
+    return body
+
+
+def _collect(page, body: dict, size: int) -> tuple[list, int, str]:
     results, start, total = [], 0, None
     while total is None or start < total:
-        body["from"], body["size"] = start, PAGE
-        resp = page.request.post(API, data=body, headers={"Content-Type": "application/json"})
-        data = resp.json()["data"]
-        total = data.get("total", 0)
-        results += data.get("results", [])
-        start += PAGE
-        if not data.get("results"):
+        body["from"], body["size"] = start, size
+        resp = page.request.post(API, data=json.dumps(body), headers={"Content-Type": "application/json"})
+        if not resp.ok:
+            return results, 0, f"HTTP {resp.status}"
+        payload = resp.json()
+        data = payload.get("data") or {}
+        if payload.get("status") != "OK":
+            return results, 0, f"Status {payload.get('status')}"
+        total = data.get("total", 0) or 0
+        batch = data.get("results", [])
+        results += batch
+        if not batch:
             break
-    log.update(gesamt_laut_sap=total, gelesen=len(results))
-    return [_entry(r) for r in results], log
+        start += size
+    return results, total or 0, ""
 
 
 def _text(value) -> str:
