@@ -67,7 +67,7 @@ def click_next(page) -> bool:
     return False
 
 
-def load(page, p: dict) -> tuple[list[str], str]:
+def open_page(page, p: dict) -> None:
     try:
         # What's-New-Seiten laden laufend nach, "networkidle" wird dort nie erreicht
         page.goto(p["url"], wait_until="domcontentloaded", timeout=90000)
@@ -77,6 +77,10 @@ def load(page, p: dict) -> tuple[list[str], str]:
         page.wait_for_selector(p["wait_for"], timeout=60000)
     else:
         page.wait_for_timeout(15000)
+
+
+def load(page, p: dict) -> tuple[list[str], str]:
+    open_page(page, p)
     first_html = page.evaluate("(document.querySelector('main') || document.body).outerHTML")
     try_max_page_size(page)
     pages, seen = [], set()
@@ -109,21 +113,25 @@ def main() -> int:
             page = browser.new_page(locale="en-US", viewport={"width": 1600, "height": 2000})
             for p in pages:
                 target = SNAP / f"{p['id']}.md"
+                store_file = DATA / f"{p['id']}.json"
                 try:
-                    lines, html = load(page, p)
-                    (DEBUG / f"{p['id']}.html").write_text(html, encoding="utf-8")
+                    if "/whats-new/" in p["url"]:
+                        entries, log = whatsnew.fetch(page, p["url"])
+                        print(f"{p['id']}: {log}")
+                    else:
+                        lines, html = load(page, p)
+                        (DEBUG / f"{p['id']}.html").write_text(html, encoding="utf-8")
                 except Exception as e:  # eine fehlerhafte Seite soll den Lauf nicht abbrechen
                     warnings.append(f"{p['id']}: nicht geladen ({str(e).splitlines()[0]})")
                     print(f"{p['id']}: FEHLER {e}")
                     continue
                 if "/whats-new/" in p["url"]:
-                    entries = whatsnew.parse(lines)
                     if len(entries) < 5:
                         warnings.append(f"{p['id']}: nur {len(entries)} Einträge erkannt – nicht übernommen. "
                                         f"Seitenaufbau geändert oder URL verschoben? {p['url']}")
                         print(f"{p['id']}: nur {len(entries)} Einträge erkannt, nicht übernommen")
                         continue
-                    r = whatsnew.merge(DATA / f"{p['id']}.json", entries)
+                    r = whatsnew.merge(store_file, entries)
                     target.write_text(whatsnew.render(p, r["store"]), encoding="utf-8")
                     print(f"{p['id']}: {len(entries)} Einträge gelesen, {r['neu']} neu, "
                           f"{r['geändert']} geändert, Bestand {r['gesamt']}")

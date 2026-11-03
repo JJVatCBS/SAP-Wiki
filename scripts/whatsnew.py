@@ -1,111 +1,157 @@
-"""Zerlegt den Text einer What's-New-Seite von help.sap.com in einzelne Einträge und pflegt einen
-dauerhaften Bestand je Produkt.
+"""What's-New-Seiten von help.sap.com über die Datenschnittstelle der Seite abrufen.
 
-Aufbau einer Seite (Stand 11/2026):
-  Oct 20, 2026                                    <- Datumsüberschrift
-  Administration - Assign More Than 100 Spaces    <- Bereich - Titel
-  There is no longer any limit ...                <- Beschreibung (mehrere Zeilen, inkl. "See ...")
-  Info only                                       <- Kennzeichen
-  2026.22                                         <- Version = Ende des Eintrags
+Die Seite lädt ihre Einträge per POST https://help.sap.com/http.svc/whatsnew. Welches Produkt
+gemeint ist, steht in der Anfrage (Spalten "outputloio" und "deliverable.version"); die Werte
+holt sich die Seite vorher aus http.svc/whatsnewconfig.
 
-Bestand: data/whatsnew/<id>.json. Einträge, die aus dem 6-Monats-Fenster der Seite fallen,
-bleiben erhalten. Ändert SAP den Text eines Eintrags, wird er überschrieben; der alte Text
-steht in der Git-Historie.
+Vorgehen: Seite einmal im Browser öffnen, die erste Datenanfrage der Seite mitschneiden und
+selbst erneut schicken – mit allen Einträgen auf einmal und ohne Datums-/Versionsfilter,
+also mit der ganzen Historie. Kein Klicken, kein Blättern.
+
+Bestand: data/whatsnew/<id>.json, Schlüssel = feste Eintrags-ID von SAP ("id").
 """
-import json, re
-from datetime import date, datetime
+import html, json, re
+from datetime import date
 from pathlib import Path
 
-DATE_RE = re.compile(r"^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2}, \d{4}$")
-VERSION_RE = re.compile(r"^\d{4}\.\d{1,2}$|^Q[1-4] \d{4}$|^\d{4} (FPS|SP)\d+$")
-HEAD_RE = re.compile(r"^([A-Z][^\n]{1,60}?) - (.{3,})$")
-NOISE = ("Page size", "Showing ", "Was this What's New helpful", "What's New Archive")
+SCHEMA = 3
+API = "https://help.sap.com/http.svc/whatsnew"
+KEEP_FILTERS = ("outputloio", "deliverable")   # bestimmen das Produkt, alles andere wird geleert
+PAGE = 500
+SKIP_FIELDS = {"id", "Description", "Latest_Revision", "Valid_as_Of", "Title"}
 
 
-TAG_WORDS = re.compile(r"\b(only|required|action|optional|recommended|deprecated|deleted|changed|"
-                       r"available|availability|beta|preview|new|announcement|planned)\b", re.I)
+def fetch(page, url: str, timeout_ms: int = 90000) -> tuple[list[dict], dict]:
+    """Öffnet die Seite, schneidet die Datenanfrage mit und holt alle Einträge."""
+    captured = {}
 
+    def on_request(req):
+        if req.method == "POST" and req.url.startswith(API) and "body" not in captured:
+            captured["body"] = req.post_data
 
-def is_tag(line: str) -> bool:
-    """Kennzeichen wie 'Info only' oder 'Customer action required' - keine Linktitel."""
-    return len(line.split()) <= 4 and not line.endswith((".", ":")) and bool(TAG_WORDS.search(line))
+    page.on("request", on_request)
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+    except Exception:
+        pass
+    for _ in range(60):
+        if "body" in captured:
+            break
+        page.wait_for_timeout(500)
+    page.remove_listener("request", on_request)
+    if "body" not in captured:
+        raise RuntimeError("Datenanfrage der Seite nicht gefunden (Seitenaufbau geändert?)")
 
-
-def parse(lines: list[str]) -> list[dict]:
-    entries, cur, day = [], None, None
-    for raw in lines:
-        line = raw.strip()
-        if not line or line.startswith(NOISE):
+    body = json.loads(captured["body"])
+    for col in body.get("columns", []):
+        if col.get("name", "").startswith(KEEP_FILTERS):
             continue
-        if DATE_RE.match(line):
-            day = datetime.strptime(re.sub(r"^(\w{3})\w*", r"\1", line), "%b %d, %Y").date().isoformat()
-            continue
-        if day is None:
-            continue                       # Kopfbereich der Seite
-        if cur is None:
-            m = HEAD_RE.match(line)
-            if m:
-                cur = {"date": day, "area": m.group(1).strip(), "title": m.group(2).strip(), "body": []}
-            continue
-        if VERSION_RE.match(line):
-            body = cur.pop("body")
-            tags = []
-            while body and is_tag(body[-1]):
-                tags.insert(0, body.pop())
-            cur.update(version=line, tags=tags, text="\n".join(body))
-            entries.append(cur)
-            cur = None
-            continue
-        cur["body"].append(line)
-    return entries
+        if "query" in col:
+            col["query"] = []
+        if "dateFrom" in col:
+            col["dateFrom"], col["dateTo"] = "", ""
+    log = {"produktfilter": [c["name"] for c in body["columns"]
+                             if c.get("name", "").startswith(KEEP_FILTERS) and c.get("query")]}
+    results, start, total = [], 0, None
+    while total is None or start < total:
+        body["from"], body["size"] = start, PAGE
+        resp = page.request.post(API, data=body, headers={"Content-Type": "application/json"})
+        data = resp.json()["data"]
+        total = data.get("total", 0)
+        results += data.get("results", [])
+        start += PAGE
+        if not data.get("results"):
+            break
+    log.update(gesamt_laut_sap=total, gelesen=len(results))
+    return [_entry(r) for r in results], log
 
 
-def key(e: dict) -> str:
-    return f"{e['date']}|{e['area']}|{e['title']}"
+def _text(value) -> str:
+    if isinstance(value, list):
+        return ", ".join(str(v) for v in value)
+    return "" if value is None else str(value)
+
+
+def html_to_md(s: str) -> str:
+    """Beschreibung (HTML) in lesbares Markdown mit Links umwandeln."""
+    s = re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+               lambda m: f"[{re.sub('<[^>]+>', '', m.group(2)).strip()}]({_abs(m.group(1))})", s, flags=re.S)
+    s = re.sub(r"<li[^>]*>", "\n- ", s)
+    s = re.sub(r"</(p|div|ul|ol|li)>|<br\s*/?>", "\n", s)
+    s = re.sub(r"<[^>]+>", "", s)
+    s = html.unescape(s)
+    lines = [re.sub(r"[ \t]+", " ", l).strip() for l in s.splitlines()]
+    return "\n".join(l for l in lines if l)
+
+
+def _abs(url: str) -> str:
+    url = html.unescape(url)
+    m = re.search(r"link-disclaimer\?site=([^&]+)", url)
+    if m:
+        from urllib.parse import unquote
+        return unquote(m.group(1))
+    return "https://help.sap.com" + url if url.startswith("/") else url
+
+
+def _entry(r: dict) -> dict:
+    fields = {k: _text(v) for k, v in r.items() if k not in SKIP_FIELDS and _text(v)}
+    return {"id": str(r.get("id")), "date": r.get("Valid_as_Of", "") or "",
+            "title": (r.get("Title") or "").strip(),
+            "text": html_to_md(r.get("Description") or ""),
+            "revision": r.get("Latest_Revision") or "", "fields": fields}
 
 
 def merge(store_path: Path, entries: list[dict]) -> dict:
-    store = json.loads(store_path.read_text(encoding="utf-8")) if store_path.exists() else {}
+    store = {}
+    if store_path.exists():
+        data = json.loads(store_path.read_text(encoding="utf-8"))
+        if data.get("_schema") == SCHEMA:
+            store = data["entries"]
     today = date.today().isoformat()
     stats = {"neu": 0, "geändert": 0}
     for e in entries:
-        k = key(e)
-        old = store.get(k)
+        old = store.get(e["id"])
         if old is None:
-            store[k] = {**e, "first_seen": today, "last_seen": today, "changed": ""}
+            store[e["id"]] = {**e, "first_seen": today, "last_seen": today, "changed": ""}
             stats["neu"] += 1
-        else:
-            if (old["text"], old["tags"], old["version"]) != (e["text"], e["tags"], e["version"]):
-                old.update(text=e["text"], tags=e["tags"], version=e["version"], changed=today)
-                stats["geändert"] += 1
-            old["last_seen"] = today
+            continue
+        if any(old.get(k) != e[k] for k in ("date", "title", "text", "fields")):
+            old.update({k: e[k] for k in ("date", "title", "text", "fields", "revision")}, changed=today)
+            stats["geändert"] += 1
+        old["last_seen"] = today
     store_path.parent.mkdir(parents=True, exist_ok=True)
-    store_path.write_text(json.dumps(store, indent=1, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    store_path.write_text(json.dumps({"_schema": SCHEMA, "entries": store}, indent=1,
+                                     ensure_ascii=False, sort_keys=True), encoding="utf-8")
     return {**stats, "gesamt": len(store), "store": store}
 
 
+def _cell(s: str) -> str:
+    return s.replace("|", "/").replace("\n", " ")
+
+
 def render(p: dict, store: dict) -> str:
-    items = sorted(store.values(), key=lambda e: (e["date"], e["area"], e["title"]), reverse=True)
+    items = sorted(store.values(), key=lambda e: (e["date"], e["title"]), reverse=True)
+    # Spalten der Übersicht: was SAP für dieses Produkt liefert (technische Felder ausgenommen)
+    hidden = {"deliverable.version", "outputloio", "Line_of_Business", "Sub_Process"}
+    extra = []
+    for e in items:
+        for h in e["fields"]:
+            if h not in hidden and h not in extra:
+                extra.append(h)
     md = [f"# What's New – {p['product']}", "",
           f"Quelle: [{p['url']}]({p['url']}) · {len(items)} Einträge · Stand {date.today().isoformat()}", "",
-          "„Erstmals gesehen“ = erster Lauf, in dem der Eintrag auftauchte. „Geändert“ = SAP hat den Text "
-          "nachträglich angepasst (alter Text: History dieser Datei).", "",
+          "„Geändert“ = SAP hat den Eintrag nachträglich angepasst (alter Text: History dieser Datei).", "",
           "## Übersicht", "",
-          "| Datum | Version | Bereich | Titel | Kennzeichen | Geändert |",
-          "|---|---|---|---|---|---|"]
+          "| Datum | Titel | " + " | ".join(extra) + " | Geändert |",
+          "|---|---|" + "---|" * len(extra) + "---|"]
     for e in items:
-        title = e["title"].replace("|", "/")
-        md.append(f"| {e['date']} | {e['version']} | {e['area']} | {title} | "
-                  f"{', '.join(e['tags'])} | {e['changed']} |")
+        md.append(f"| {e['date']} | {_cell(e['title'])} | "
+                  + " | ".join(_cell(e["fields"].get(h, "")) for h in extra) + f" | {e['changed']} |")
     md += ["", "## Einträge", ""]
-    current = None
     for e in items:
-        if e["date"] != current:
-            current = e["date"]
-            md += [f"### {current}", ""]
-        md += [f"#### {e['area']} – {e['title']}", "",
-               f"*Version {e['version']} · {', '.join(e['tags']) or '–'} · erstmals gesehen {e['first_seen']}"
-               + (f" · geändert {e['changed']}" if e["changed"] else "") + "*", ""]
-        md += [l + "  " for l in e["text"].splitlines()]   # zwei Leerzeichen = Zeilenumbruch in Markdown
+        meta = " · ".join(f"{h}: {_cell(e['fields'][h])}" for h in extra if e["fields"].get(h))
+        md += [f"### {e['date']} · {e['title']}", "",
+               f"*{meta} · SAP-ID {e['id']}*" + (f" · *geändert {e['changed']}*" if e["changed"] else ""), ""]
+        md += [l + "  " for l in e["text"].splitlines()]
         md.append("")
     return "\n".join(md) + "\n"
