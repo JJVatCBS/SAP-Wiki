@@ -11,7 +11,7 @@ Ergebnis: reports/mirror-check/<id>.md mit
 Läuft nur, wenn der Guide seit dem letzten Abgleich neu veröffentlicht wurde (buildNo).
 Übernimmt nichts in den Wiki-Bestand.
 """
-import difflib, re, time
+import difflib, html, re, time
 from datetime import date
 from pathlib import Path
 
@@ -22,16 +22,41 @@ MIRRORS = ROOT / ".cache" / "mirrors"
 OUT = ROOT / "reports" / "mirror-check"
 
 
-def norm(text: str) -> list[str]:
-    """Text für den Vergleich vereinheitlichen: ohne Markdown, Links, Bilder; klein geschrieben; in Sätze zerlegt."""
-    text = re.sub(r"^---.*?---\s*", "", text, flags=re.S)          # Frontmatter
-    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)                # Bilder
-    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)            # Links -> Linktext
-    text = re.sub(r"<[^>]+>", " ", text)                            # HTML-Reste im Spiegel
-    text = re.sub(r"\\([\\`*_{}\[\]()#+\-.!|>])", r"\1", text)       # Markdown-Escapes
-    text = re.sub(r"[#*_`>|]", " ", text)
+CHECK_FORMAT = "2"   # erhöhen, wenn sich der Vergleich ändert -> Abgleich läuft einmal neu
+
+LABEL_WORDS = r"(note|caution|tip|restriction|example|remember|recommendation|important)"
+
+
+def norm(text: str, title: str = "") -> list[str]:
+    """Text für den Vergleich vereinheitlichen und in Sätze zerlegen.
+    Entfernt alles, was sich zwischen GitHub-Markdown und Hilfe-HTML nur in der Form unterscheidet:
+    Kopfdaten, Überschriften, Bilder, Link-Ziele und -Tooltips, Link-Symbole, Aufzählungs- und
+    Schrittnummern, Tabellenzeichen, Hinweis-Etiketten (Note, Caution …), Leerzeichen vor Satzzeichen."""
+    text = html.unescape(text)
+    text = re.sub(r"^---.*?---\s*", "", text, flags=re.S)              # Frontmatter
+    text = re.sub(r"<!--.*?-->", " ", text, flags=re.S)                  # HTML-Kommentare (loio-Kennung)
+    text = re.sub(r"(?m)^\s*#.*$", "", text)                          # Überschriften (Titel steht in beiden)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)                    # Bilder
+    text = re.sub(r'(\]\([^)\s]+)\s+"[^"]*"\)', r"\1)", text)            # Tooltip in Markdown-Links
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)                # Links -> Linktext
+    text = re.sub(r":arrow[a-z_ ]*:", "", text)                         # GitHub-Symbol externer Link
+    text = re.sub(r"</?[a-zA-Z][^>]*>", " ", text)                       # nur echte HTML-Tags, nicht "<="
+    text = re.sub(r"\\([\\`*_{}\[\]()#+\-.!|>])", r"\1", text)           # Markdown-Escapes
+    text = re.sub(r"(?m)^\s*(\d+\.|[-*+])\s+", "", text)                  # Schrittnummern, Aufzählungszeichen
+    text = re.sub(r"(?m)^\s*\d+\.\s*$", "", text)                         # allein stehende Nummern "1."
+    text = re.sub(r"\|?\s*-{3,}\s*\|?", " ", text)                         # Tabellen-Trennzeilen
+    text = re.sub(r"(?mi)^\s*" + LABEL_WORDS + r"\b\s*:?", " ", text)    # Hinweis-Etikett am Zeilenanfang
+    text = re.sub(r"(?i)\b" + LABEL_WORDS + r"\s*:", " ", text)            # "Note:" mitten im Text
+    text = re.sub(r"[\ue000-\uf8ff]", "", text)                          # Symbolzeichen der SAP-Schrift
+    text = re.sub(r"[#*_`|\[\]]", " ", text)
+    text = re.sub(r"\(\s+", "(", text)
+    text = re.sub(r"\s+([.,;:)!?])", r"\1", text)                       # Leerzeichen vor Satzzeichen
     words = re.sub(r"\s+", " ", text).strip().lower()
-    return re.split(r"(?<=[.!?:])\s+", words)                      # Satzweise vergleichen
+    t = re.sub(r"\s+", " ", title.lower()).strip()
+    for _ in range(2):                                                  # Titel am Anfang (Hilfe: doppelt)
+        if t and words.startswith(t):
+            words = words[len(t):].lstrip(" -–")
+    return [x for x in re.split(r"(?<=[.!?:])\s+", words) if x]
 
 
 def run(req, c: dict, state: dict) -> str:
@@ -43,7 +68,8 @@ def run(req, c: dict, state: dict) -> str:
     d = meta.get("deliverable") or {}
     did, build = d.get("id"), d.get("buildNo")
     key = f"check:{c['id']}"
-    if state.get(key, {}).get("buildNo") == build and (OUT / f"{c['id']}.md").exists():
+    if (state.get(key, {}).get("buildNo") == build and state.get(key, {}).get("format") == CHECK_FORMAT
+            and (OUT / f"{c['id']}.md").exists()):
         return f"unverändert (buildNo {build}), kein neuer Abgleich"
 
     first = fg.get_json(req, "pagecontent", {"deliverableInfo": 1, "deliverable_id": did, "buildNo": build,
@@ -65,8 +91,8 @@ def run(req, c: dict, state: dict) -> str:
         matched.add(short)
         data = first if page["u"] == (meta.get("filePath") or u["topic_url"]) else fg.get_json(
             req, "pagecontent", {"deliverableInfo": 0, "deliverable_id": did, "buildNo": build, "file_path": page["u"]})
-        a = norm(f.read_text(encoding="utf-8"))
-        b = norm(fg.body_to_md(data.get("body") or ""))
+        a = norm(f.read_text(encoding="utf-8"), page["t"])
+        b = norm(fg.body_to_md(data.get("body") or ""), page["t"])
         # Übereinstimmung wortweise (robust gegen andere Zeilen- und Satzgrenzen); Unterschiede satzweise anzeigen
         wa, wb = " ".join(a).split(), " ".join(b).split()
         ratio = difflib.SequenceMatcher(None, wa, wb, autojunk=False).ratio()
@@ -105,7 +131,7 @@ def run(req, c: dict, state: dict) -> str:
                    *[l[:300] for l in diff[:12]], "```", ""]
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{c['id']}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-    state[key] = {"buildNo": build, "checked": date.today().isoformat()}
+    state[key] = {"buildNo": build, "format": CHECK_FORMAT, "checked": date.today().isoformat()}
     return (f"{len(toc)} Hilfeseiten, {len(rows)} auf GitHub gefunden: {ident} identisch, {small} kleine, "
             f"{big} deutliche Abweichung; "
             f"{len(only_help)} nur in der Hilfe, {len(only_gh)} nur auf GitHub")
