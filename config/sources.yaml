@@ -60,3 +60,12 @@ help_guides:
     product: SAP BW/4HANA
     title: Data Product Generator for SAP Business Data Cloud
     url: "https://help.sap.com/docs/SAP_BW4HANA/ed919380760a44388ab90e6bb3e7480a/4efcb40d03334381a6111fd9d270b7f0.html?locale=en-US"
+
+# Einmaliger Abgleich GitHub-Spiegel gegen SAP-Hilfe (Bericht unter reports/mirror-check/).
+# Läuft erneut nur, wenn SAP den Guide neu veröffentlicht. Eintrag nach dem Prüfen wieder entfernen.
+mirror_checks:
+  - id: datasphere-acquiring
+    title: "SAP Datasphere – Acquiring, Preparing, and Modeling Data"
+    mirror: datasphere
+    path: docs/Acquiring-Preparing-Modeling-Data
+    url: "https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/6df42e3675324d73bd35c2e70d46a7ee.html?locale=en-US"
