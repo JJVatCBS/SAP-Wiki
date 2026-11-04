@@ -2,26 +2,26 @@
   "datasphere": {
     "sha": "e011e9d04fe06def42cb5f0f9315da6ffa36c855",
     "upstream_last_change": "2026-10-20",
-    "checked": "2026-11-03"
+    "checked": "2026-11-04"
   },
   "hana-cloud-db": {
     "sha": "2bc2e9cb566e04a6985820ca332e9d595c55d3e9",
     "upstream_last_change": "2025-10-28",
-    "checked": "2026-11-03"
+    "checked": "2026-11-04"
   },
   "hana-cloud-data-lake": {
     "sha": "75dbd670fc13b8b61a1958395de5de58314648ec",
     "upstream_last_change": "2025-10-28",
-    "checked": "2026-11-03"
+    "checked": "2026-11-04"
   },
   "integration-suite": {
     "sha": "147acb7d15af1e4fb86e3093cc3e11d4782d9043",
     "upstream_last_change": "2026-10-22",
-    "checked": "2026-11-03"
+    "checked": "2026-11-04"
   },
   "sap-ai": {
     "sha": "a92ce0d322cbc902f933fa31f86075c23eec4391",
     "upstream_last_change": "2026-10-27",
-    "checked": "2026-11-03"
+    "checked": "2026-11-04"
   }
 }

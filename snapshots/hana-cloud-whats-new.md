@@ -1,6 +1,6 @@
 # What's New – SAP HANA Cloud
 
-Quelle: [https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US](https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US) · 1418 Einträge · Stand 2026-11-03
+Quelle: [https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US](https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US) · 1418 Einträge · Stand 2026-11-04
 
 „Geändert“ = SAP hat den Eintrag nachträglich angepasst (alter Text: History dieser Datei).
 

@@ -1,6 +1,6 @@
 # What's New – SAP Datasphere
 
-Quelle: [https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?locale=en-US](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?locale=en-US) · 861 Einträge · Stand 2026-11-03
+Quelle: [https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?locale=en-US](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?locale=en-US) · 861 Einträge · Stand 2026-11-04
 
 „Geändert“ = SAP hat den Eintrag nachträglich angepasst (alter Text: History dieser Datei).
 
