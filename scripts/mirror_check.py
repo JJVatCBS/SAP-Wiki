@@ -67,7 +67,9 @@ def run(req, c: dict, state: dict) -> str:
             req, "pagecontent", {"deliverableInfo": 0, "deliverable_id": did, "buildNo": build, "file_path": page["u"]})
         a = norm(f.read_text(encoding="utf-8"))
         b = norm(fg.body_to_md(data.get("body") or ""))
-        ratio = difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
+        # Übereinstimmung wortweise (robust gegen andere Zeilen- und Satzgrenzen); Unterschiede satzweise anzeigen
+        wa, wb = " ".join(a).split(), " ".join(b).split()
+        ratio = difflib.SequenceMatcher(None, wa, wb, autojunk=False).ratio()
         diff = [l for l in difflib.unified_diff(a, b, lineterm="", n=0) if l[:1] in "+-" and l[:3] not in ("+++", "---")]
         rows.append((ratio, page, f, diff))
         time.sleep(fg.PAUSE)
@@ -87,7 +89,7 @@ def run(req, c: dict, state: dict) -> str:
           f"| – deutliche Abweichung (< 95 %) | {big} |",
           f"| Seiten nur in der Hilfe | {len(only_help)} |",
           f"| Seiten nur auf GitHub (in diesem Ordner) | {len(only_gh)} |", "",
-          "Hinweise: Verglichen wird reiner Text satzweise; Formatierung, Links und Bilder zählen nicht. "
+          "Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Formatierung, Links und Bilder zählen nicht. "
           "„Nur auf GitHub“ kann auch heißen, dass die Seite in der Hilfe zu einem anderen Guide gehört.", ""]
     if only_help:
         md += ["## Nur in der Hilfe", ""] + [f"- {p['t']} (`{p['u']}`)" for p in only_help] + [""]

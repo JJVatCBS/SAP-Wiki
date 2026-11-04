@@ -66,7 +66,7 @@ SEEN_IMG = []   # erste Bildpfade je Lauf, zur Kontrolle im Log
 def _img(tag: str, base: str) -> str:
     """Bild-Tag in einen Markdown-Bildlink umwandeln; relative Pfade werden auf help.sap.com ergänzt."""
     src = re.search(r'src="([^"]+)"', tag)
-    if not src or "sap_link.png" in src.group(1):          # Symbol "externer Link" weglassen
+    if not src or "sap_link.png" in src.group(1) or "themes/" in src.group(1):   # Link- und Navigationssymbole weglassen
         return ""
     alt = re.search(r'alt="([^"]*)"', tag)
     url = html.unescape(src.group(1))
