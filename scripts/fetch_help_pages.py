@@ -1,16 +1,13 @@
-"""Rendert Seiten von help.sap.com ohne GitHub-Spiegel (z. B. What's New) und speichert den Text.
+"""Seiten von help.sap.com ohne GitHub-Spiegel abrufen (Abschnitt help_pages in config/sources.yaml).
 
-Die Änderungshistorie entsteht über die Commits dieses Repos: Ändert sich eine Seite,
-zeigt git diff snapshots/<id>.md genau, was SAP geändert hat.
+What's-New-Seiten (URL enthält /whats-new/): Abruf über die Datenschnittstelle der Seite,
+siehe whatsnew.py. Ergebnis: snapshots/<id>.md (lesbare Übersicht) und data/whatsnew/<id>.json (Bestand).
 
-What's-New-Seiten sind in Seiten zu 25 Einträgen aufgeteilt: das Skript versucht zuerst die
-größte Seitengröße zu wählen und blättert danach über "Next" bzw. die Seitenzahlen weiter.
+Andere Seiten (Rückfallweg): Text der Seite im Browser lesen und unter snapshots/<id>.md speichern.
 
-Sicherung: Ist der neue Text deutlich kürzer als der gespeicherte (Seite verschoben, Fehlerseite,
-Ladeproblem), wird nicht überschrieben, sondern eine Warnung nach state/warnings.md geschrieben.
-
-Übergangsweise schreibt das Skript den HTML-Aufbau der ersten Seite nach debug/<id>.html,
-damit die Einträge später sauber als Tabelle ausgelesen werden können.
+Sicherung: Liefert eine Seite zu wenig Inhalt (verschoben, Fehlerseite, Aufbau geändert), wird der alte
+Stand nicht überschrieben, sondern eine Warnung nach state/warnings.md geschrieben; der Wochenbericht
+zeigt sie unter "Achtung".
 """
 import sys
 from datetime import date
@@ -41,6 +38,7 @@ NEXT_SELECTORS = [
 
 
 def main_text(page) -> str:
+    """Sichtbaren Text des Hauptbereichs der Seite lesen (nur für Seiten ohne Datenschnittstelle)."""
     el = page.query_selector("main")
     return (el or page.query_selector("body")).inner_text()
 
@@ -58,6 +56,7 @@ def try_max_page_size(page) -> None:
 
 
 def click_next(page) -> bool:
+    """Auf 'Weiter' blättern, falls vorhanden (nur für Seiten ohne Datenschnittstelle)."""
     for s in NEXT_SELECTORS:
         el = page.query_selector(s)
         if el and el.is_visible():
@@ -68,6 +67,7 @@ def click_next(page) -> bool:
 
 
 def open_page(page, p: dict) -> None:
+    """Seite im Browser öffnen und warten, bis Inhalte geladen sind."""
     try:
         # What's-New-Seiten laden laufend nach, "networkidle" wird dort nie erreicht
         page.goto(p["url"], wait_until="domcontentloaded", timeout=90000)
@@ -80,6 +80,7 @@ def open_page(page, p: dict) -> None:
 
 
 def load(page, p: dict) -> tuple[list[str], str]:
+    """Allgemeine help.sap.com-Seite als Text lesen, mit Blättern (Rückfallweg für Seiten ohne Datenschnittstelle)."""
     open_page(page, p)
     first_html = page.evaluate("(document.querySelector('main') || document.body).outerHTML")
     try_max_page_size(page)
@@ -100,6 +101,7 @@ def load(page, p: dict) -> tuple[list[str], str]:
 
 
 def main() -> int:
+    """Alle help_pages aus config/sources.yaml abrufen: What's-New-Seiten über die Datenschnittstelle (whatsnew.py), sonst als Text; Warnungen nach state/warnings.md."""
     cfg = yaml.safe_load((ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
     pages = [p for p in cfg.get("help_pages", []) if p.get("url")]
     for d in (SNAP, DEBUG, DATA, WARN.parent):

@@ -28,6 +28,7 @@ def fetch(page, url: str, timeout_ms: int = 90000) -> tuple[list[dict], dict]:
 
     def on_response(resp):
         # Die Seite schickt mehrere Anfragen an http.svc/whatsnew; gebraucht wird die mit Einträgen
+        """Antworten der Seite mitlesen und die Datenanfrage merken, deren Antwort Einträge enthält."""
         if resp.request.method != "POST" or not resp.url.startswith(API) or "body" in captured:
             return
         try:
@@ -73,6 +74,7 @@ def fetch(page, url: str, timeout_ms: int = 90000) -> tuple[list[dict], dict]:
 
 
 def _variant(original: dict, clear: bool, dates) -> dict:
+    """Kopie der mitgeschnittenen Anfrage: Produktfilter behalten, alle anderen Filter leeren; Datum offen oder 1900–2100."""
     body = json.loads(json.dumps(original))
     if not clear:
         return body
@@ -87,6 +89,7 @@ def _variant(original: dict, clear: bool, dates) -> dict:
 
 
 def _collect(page, body: dict, size: int) -> tuple[list, int, str]:
+    """Anfrage seitenweise an http.svc/whatsnew schicken, bis alle Einträge da sind. Rückgabe: Einträge, Gesamtzahl laut SAP, Fehlerhinweis."""
     results, start, total = [], 0, None
     while total is None or start < total:
         body["from"], body["size"] = start, size
@@ -107,6 +110,7 @@ def _collect(page, body: dict, size: int) -> tuple[list, int, str]:
 
 
 def _text(value) -> str:
+    """Feldwert von SAP als Text: Listen werden mit Komma verbunden."""
     if isinstance(value, list):
         return ", ".join(str(v) for v in value)
     return "" if value is None else str(value)
@@ -125,6 +129,7 @@ def html_to_md(s: str) -> str:
 
 
 def _abs(url: str) -> str:
+    """Link vollständig machen: relative help.sap.com-Pfade ergänzen, Umleitungen über link-disclaimer auflösen."""
     url = html.unescape(url)
     m = re.search(r"link-disclaimer\?site=([^&]+)", url)
     if m:
@@ -134,6 +139,7 @@ def _abs(url: str) -> str:
 
 
 def _entry(r: dict) -> dict:
+    """Einen SAP-Datensatz in unser Format bringen: ID, Datum, Titel, Beschreibung als Markdown, übrige Felder."""
     fields = {k: _text(v) for k, v in r.items() if k not in SKIP_FIELDS and _text(v)}
     return {"id": str(r.get("id")), "date": r.get("Valid_as_Of", "") or "",
             "title": (r.get("Title") or "").strip(),
@@ -142,6 +148,7 @@ def _entry(r: dict) -> dict:
 
 
 def merge(store_path: Path, entries: list[dict]) -> dict:
+    """Einträge in den Bestand data/whatsnew/<id>.json übernehmen: neue anlegen, geänderte markieren, nichts löschen."""
     store = {}
     if store_path.exists():
         data = json.loads(store_path.read_text(encoding="utf-8"))
@@ -166,10 +173,12 @@ def merge(store_path: Path, entries: list[dict]) -> dict:
 
 
 def _cell(s: str) -> str:
+    """Text tabellentauglich machen (keine senkrechten Striche, keine Zeilenumbrüche)."""
     return s.replace("|", "/").replace("\n", " ")
 
 
 def render(p: dict, store: dict) -> str:
+    """Bestand als lesbare Markdown-Datei ausgeben: Übersichtstabelle und Einträge mit Beschreibung."""
     items = sorted(store.values(), key=lambda e: (e["date"], e["title"]), reverse=True)
     # Spalten der Übersicht: was SAP für dieses Produkt liefert (technische Felder ausgenommen)
     hidden = {"deliverable.version", "outputloio", "Line_of_Business", "Sub_Process"}

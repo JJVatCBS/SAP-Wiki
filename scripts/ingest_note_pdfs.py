@@ -35,6 +35,7 @@ SECTION_RE = re.compile(r"^(" + "|".join(re.escape(s) for s in SECTIONS) + r")\s
 
 
 def pdf_text(pdf: Path) -> str:
+    """Text aus einem PDF lesen (pdftotext aus poppler-utils)."""
     return subprocess.run(["pdftotext", str(pdf), "-"], check=True, capture_output=True, text=True).stdout
 
 
@@ -53,6 +54,7 @@ def parse(text: str) -> dict:
 
 
 def to_markdown(text: str) -> str:
+    """Note-Text lesbar machen: Abschnitte wie 'Symptom' oder 'Solution' als Überschrift, Aufzählungszeichen als Liste."""
     out = []
     for raw in text.replace("\f", "\n").splitlines():
         line = raw.strip()
@@ -69,6 +71,7 @@ def to_markdown(text: str) -> str:
 
 
 def read_front(md: Path) -> dict:
+    """Kopfdaten (Frontmatter zwischen den ---) einer Note-Datei lesen."""
     meta, lines = {}, md.read_text(encoding="utf-8").split("---", 2)
     if len(lines) == 3:
         for l in lines[1].strip().splitlines():
@@ -98,6 +101,7 @@ def body_of(md_file_text: str) -> str:
 
 
 def diff_entry(num: str, old: dict, new: dict, old_body: str, new_body: str) -> list[str]:
+    """Changelog-Eintrag für eine neue Version: Versionswechsel, Freigabedatum, je Abschnitt die dazu- und weggekommenen Zeilen."""
     today = date.today().isoformat()
     lines = [f"## {num} – {new['titel']}", "",
              f"*erfasst {today} · Version {old.get('version', '?')} → {new['version']} · "
@@ -128,6 +132,7 @@ def diff_entry(num: str, old: dict, new: dict, old_body: str, new_body: str) -> 
 
 
 def add_changelog(entries: list[list[str]]) -> None:
+    """Neue Einträge oben in notes/changelog.md einfügen (neueste zuerst)."""
     if not entries:
         return
     head = ["# Änderungen an SAP Notes und KBAs", "",
@@ -138,6 +143,7 @@ def add_changelog(entries: list[list[str]]) -> None:
 
 
 def write_note(num: str, meta: dict, text: str) -> str:
+    """notes/text/<nummer>.md mit Kopfdaten, Infozeile und Text schreiben; gibt den Text als Markdown zurück."""
     md = to_markdown(text)
     header = ("---\n"
               f"source_type: SAP Note/KBA\nnumber: {num}\nversion: {meta['version']}\n"
@@ -152,6 +158,7 @@ def write_note(num: str, meta: dict, text: str) -> str:
 
 
 def archive(pdf: Path, meta: dict) -> str:
+    """PDF als notes/archive/<nummer>_v<version>.pdf ablegen; liegt diese Version schon dort, wird die neue Datei verworfen."""
     name = f"{meta['nummer']}_v{meta['version'] or 'x'}.pdf"
     target = ARCHIVE / name
     if pdf.resolve() != target.resolve():
@@ -163,6 +170,7 @@ def archive(pdf: Path, meta: dict) -> str:
 
 
 def main() -> int:
+    """Neue PDFs verarbeiten (nach Änderung der Erkennung einmalig auch das Archiv), Changelog und log.csv aktualisieren."""
     for d in (INBOX, TEXT, ARCHIVE, PARSER_STATE.parent):
         d.mkdir(parents=True, exist_ok=True)
     rescan = (PARSER_STATE.read_text().strip() if PARSER_STATE.exists() else "") != PARSER_VERSION

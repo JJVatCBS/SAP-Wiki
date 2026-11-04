@@ -23,11 +23,13 @@ SNIPPET_LEN = 400
 
 
 def git(repo: Path, *args: str) -> str:
+    """Git-Befehl in einem geklonten Spiegel ausführen und die Ausgabe zurückgeben."""
     return subprocess.run(["git", "-C", str(repo), *args], check=True,
                           capture_output=True, text=True).stdout
 
 
 def update_clone(m: dict) -> Path:
+    """Spiegel nach .cache/mirrors/<id> klonen bzw. auf den neuesten Stand von SAP bringen."""
     target = CACHE / m["id"]
     if (target / ".git").exists():
         git(target, "fetch", "--quiet", "origin")
@@ -40,6 +42,7 @@ def update_clone(m: dict) -> Path:
 
 
 def title_of(repo: Path, sha: str, path: str) -> str:
+    """Seitentitel (erste '# '-Zeile) einer Markdown-Datei in einem bestimmten Commit lesen."""
     try:
         text = git(repo, "show", f"{sha}:{path}")
     except subprocess.CalledProcessError:
@@ -69,6 +72,7 @@ def snippets(repo: Path, sha: str, path: str) -> list[str]:
 
 
 def report_commit(m: dict, repo: Path, sha: str) -> Path | None:
+    """Für einen SAP-Commit den Bericht reports/mirrors/<id>/<datum>_<sha>.md schreiben: geänderte Seiten mit Link und geänderten Zeilen."""
     meta = git(repo, "show", "-s", "--format=%cs%n%s", sha).splitlines()
     day = meta[0]
     files = git(repo, "show", "--format=", "--name-status", sha, "--", f"{m['path']}/*.md").splitlines()
@@ -103,6 +107,7 @@ def report_commit(m: dict, repo: Path, sha: str) -> Path | None:
 
 
 def main() -> None:
+    """Alle Spiegel aus config/sources.yaml abrufen und je neuem SAP-Commit einen Bericht schreiben; Stand in state/mirrors.json merken."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--backfill-since", help="beim ersten Lauf: Historie ab diesem Datum (YYYY-MM-DD) nachholen")
     ap.add_argument("--only", help="nur diesen Spiegel (id) verarbeiten")

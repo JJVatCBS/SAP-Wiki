@@ -12,10 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def git(*args: str) -> str:
+    """Git-Befehl im Repo ausführen und die Ausgabe zurückgeben."""
     return subprocess.run(["git", "-C", str(ROOT), *args], check=True, capture_output=True, text=True).stdout
 
 
 def changed(prefix: str) -> list[tuple[str, str]]:
+    """Dateien unter einem Pfad, die seit dem letzten Commit neu, geändert oder entfernt sind (aus git status)."""
     out = []
     for line in git("status", "--porcelain", "--untracked-files=all", "--", prefix).splitlines():
         status, path = line[:2].strip(), line[3:]
@@ -27,6 +29,7 @@ def changed(prefix: str) -> list[tuple[str, str]]:
 
 
 def main() -> int:
+    """Wochenbericht reports/weekly/<Jahr>-KW<nn>.md aus allen Änderungen dieses Laufs schreiben."""
     y, w, _ = date.today().isocalendar()
     mirrors = changed("reports/mirrors")
     snaps = changed("snapshots")

@@ -23,6 +23,7 @@ OUT = ROOT / "reports" / "mirror-check"
 
 
 def norm(text: str) -> list[str]:
+    """Text für den Vergleich vereinheitlichen: ohne Markdown, Links, Bilder; klein geschrieben; in Sätze zerlegt."""
     text = re.sub(r"^---.*?---\s*", "", text, flags=re.S)          # Frontmatter
     text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)                # Bilder
     text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)            # Links -> Linktext
@@ -34,6 +35,7 @@ def norm(text: str) -> list[str]:
 
 
 def run(req, c: dict, state: dict) -> str:
+    """Einen Guide aus der Hilfe mit dem GitHub-Spiegel vergleichen und den Bericht reports/mirror-check/<id>.md schreiben."""
     u = fg.parse_url(c["url"])
     meta = fg.get_json(req, "deliverableMetadata", {
         "product_url": u["product_url"], "topic_url": u["topic_url"], "version": "LATEST",

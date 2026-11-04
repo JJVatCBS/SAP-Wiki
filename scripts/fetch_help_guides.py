@@ -32,6 +32,7 @@ FORMAT = "2"         # erhöhen, wenn sich die Umwandlung ändert -> alle Guides
 
 
 def parse_url(url: str) -> dict:
+    """help.sap.com-URL in Produkt, Guide-ID und Seite zerlegen."""
     parts = urlparse(url).path.strip("/").split("/")   # docs/<product>/<loio>/<topic>.html
     if len(parts) < 4 or parts[0] != "docs":
         raise ValueError(f"URL nicht im Format help.sap.com/docs/<produkt>/<guide>/<seite>.html: {url}")
@@ -39,6 +40,7 @@ def parse_url(url: str) -> dict:
 
 
 def get_json(req, endpoint: str, params: dict) -> dict:
+    """GET-Anfrage an http.svc/<endpoint> der Hilfe; liefert den Inhalt von 'data' oder bricht mit Fehlermeldung ab."""
     resp = req.get(f"{SVC}/{endpoint}?{urlencode(params)}", timeout=60000)
     if not resp.ok:
         raise RuntimeError(f"{endpoint}: HTTP {resp.status}")
@@ -49,6 +51,7 @@ def get_json(req, endpoint: str, params: dict) -> dict:
 
 
 def flatten(nodes: list, path: tuple = ()) -> list[dict]:
+    """Inhaltsverzeichnis (Baum) in eine flache Liste aller Seiten mit Titel, Datei und übergeordnetem Pfad umwandeln."""
     out = []
     for n in nodes or []:
         if n.get("u"):
@@ -61,6 +64,7 @@ SEEN_IMG = []   # erste Bildpfade je Lauf, zur Kontrolle im Log
 
 
 def _img(tag: str, base: str) -> str:
+    """Bild-Tag in einen Markdown-Bildlink umwandeln; relative Pfade werden auf help.sap.com ergänzt."""
     src = re.search(r'src="([^"]+)"', tag)
     if not src or "sap_link.png" in src.group(1):          # Symbol "externer Link" weglassen
         return ""
@@ -118,6 +122,7 @@ def body_to_md(s: str, img_base: str = "https://help.sap.com/") -> str:
 
 
 def _abs(url: str) -> str:
+    """Link vollständig machen: relative help.sap.com-Pfade ergänzen, Umleitungen über link-disclaimer auflösen."""
     url = html.unescape(url)
     m = re.search(r"link-disclaimer\?site=([^&]+)", url)
     if m:
@@ -127,10 +132,12 @@ def _abs(url: str) -> str:
 
 
 def slug(text: str) -> str:
+    """Dateinamen-tauglichen Kurztext aus einem Seitentitel bilden."""
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "seite"
 
 
 def fetch_guide(req, g: dict, state: dict) -> str:
+    """Einen Guide abrufen: Metadaten, bei neuer buildNo Inhaltsverzeichnis und alle Seiten; gelöschte Seiten entfernen."""
     u = parse_url(g["url"])
     meta = get_json(req, "deliverableMetadata", {
         "product_url": u["product_url"], "topic_url": u["topic_url"], "version": "LATEST",
@@ -190,6 +197,7 @@ def fetch_guide(req, g: dict, state: dict) -> str:
 
 
 def main() -> int:
+    """Alle help_guides und mirror_checks aus config/sources.yaml abarbeiten; Stand in state/guides.json, Warnungen in state/warnings_guides.md."""
     cfg = yaml.safe_load((ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
     guides = [g for g in cfg.get("help_guides", []) if g.get("url")]
     checks = cfg.get("mirror_checks", []) or []
