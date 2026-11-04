@@ -51,3 +51,12 @@ help_pages:
     title: What's New
     url: "https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US"
     wait_for: ""
+
+# Ganze Guides ohne GitHub-Spiegel, seitenweise über die Schnittstelle der Hilfe.
+# url: Link auf IRGENDEINE Seite des Guides (am besten Englisch), Format help.sap.com/docs/<produkt>/<guide>/<seite>.html
+# Der Job ruft einen Guide nur neu ab, wenn SAP ihn neu veröffentlicht hat (buildNo).
+help_guides:
+  - id: bw4hana-data-product-generator
+    product: SAP BW/4HANA
+    title: Data Product Generator for SAP Business Data Cloud
+    url: "https://help.sap.com/docs/SAP_BW4HANA/ed919380760a44388ab90e6bb3e7480a/4efcb40d03334381a6111fd9d270b7f0.html?locale=en-US"
