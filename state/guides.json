@@ -8,6 +8,7 @@
   },
   "check:datasphere-acquiring": {
     "buildNo": 317,
+    "format": "2",
     "checked": "2026-11-04"
   }
 }
