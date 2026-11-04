@@ -3,7 +3,7 @@ name: SAP-Wiki Wochenlauf
 on:
   schedule:
     - cron: "17 4 * * 1"   # montags 04:17 UTC
-  workflow_dispatch:
+  workflow_dispatch:        # manuell starten: Actions -> SAP-Wiki Wochenlauf -> Run workflow
     inputs:
       backfill_since:
         description: "Nur beim ersten Lauf: Historie ab Datum (YYYY-MM-DD), sonst leer lassen"
@@ -46,8 +46,13 @@ jobs:
         run: |
           git config user.name "sap-wiki-bot"
           git config user.email "sap-wiki-bot@users.noreply.github.com"
-          grep -qx '.cache/' .gitignore 2>/dev/null || echo '.cache/' >> .gitignore
-          git rm -r --cached --quiet .cache 2>/dev/null || true
+          for e in '.cache/' '__pycache__/'; do grep -qxF "$e" .gitignore 2>/dev/null || echo "$e" >> .gitignore; done
+          git rm -r --cached --quiet .cache scripts/__pycache__ 2>/dev/null || true
           git add -A
           git diff --cached --quiet || git commit -m "Wochenlauf $(date +%G-KW%V)"
-          git push
+          # Falls während des Laufs jemand ins Repo hochgeladen hat: neuen Stand holen und erneut speichern
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin main && git push && break
+            sleep 10
+          done
+          git push   # schlägt sichtbar fehl, falls das Speichern dreimal nicht geklappt hat
