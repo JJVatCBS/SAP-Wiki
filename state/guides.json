@@ -3,6 +3,11 @@
     "deliverable_id": 39576431,
     "buildNo": 535,
     "pages": 35,
+    "format": "2",
+    "checked": "2026-11-04"
+  },
+  "check:datasphere-acquiring": {
+    "buildNo": 317,
     "checked": "2026-11-04"
   }
 }

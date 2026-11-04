@@ -72,7 +72,9 @@ In the SAP GUI you can edit data subscriptions in the RSDPS transaction.
 
 - Select the data subscription you want to edit from the list.
 
-- Choose Edit ()
+- Choose Edit (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio094d20cb7df9430d9d4e432261be447e_LowRes.png)
+)
 among the icons in the top bar.
 As a result, the edit screen will open,
 providing an overview of the fields you can edit for the selected data
@@ -105,13 +107,17 @@ Tip
 In the edit screen you can also
 access the following options in the top bar:
 
-- Display ↔ Change (): Switch
+- Display ↔ Change (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9a793aa7d6674b8abb1a24ef414c7809_LowRes.png)
+): Switch
 between displaying the properties of the data subscription
 in view-only mode and in edit mode. This allows you to see
 directly which properties you can still change (fields
 displayed in white) and which not (fields greyed out).
 
-- Check Data Subscription (): Check
+- Check Data Subscription (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio83e47d9ccd8f4f0f8963382293cac50c_LowRes.png)
+): Check
 the data subscription for any potential issues which could
 impact the extraction of data. The results can be viewed in
 a log screen, including any warnings or error messages
@@ -119,21 +125,29 @@ concerning the status of the source (InfoProvider), the
 target, the connection to SAP Datasphere, and the local
 table (file).
 
-- Activate Data Subscription (): Make
+- Activate Data Subscription (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob3fce2b60d5b4fd8855e91ad0e30c879_LowRes.png)
+): Make
 the data subscription executable after it has been created
 or changed. This changes the status of the data subscription
 from Inactive to
 Active.
 
-- Data Preview ():
+- Data Preview (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio69a0f8145a744f76b6ddd3627da55716_LowRes.png)
+):
 Preview the data set associated with the data subscription.
 It's also possible to download this data set into a local
 file or export it into other formats.
 
-- Select Save () in
+- Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) in
 the top bar to save the changes.
 
-- Select Activate Data Subscription () to make the data
+- Select Activate Data Subscription (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob3fce2b60d5b4fd8855e91ad0e30c879_LowRes.png)
+) to make the data
 subscription executable again.
 Note
 

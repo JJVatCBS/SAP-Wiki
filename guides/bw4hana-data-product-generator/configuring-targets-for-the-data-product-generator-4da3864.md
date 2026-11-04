@@ -49,35 +49,49 @@ target.
 
 |
 Check connectivity for target
-| Select Check Connectivity () to check
+| Select Check Connectivity (
 | --- |
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9329e2479b9642d8b076d913dfaf1857_LowRes.png)
+) to check
 the connection to SAP Datasphere for the displayed
 target.
 |
 
 |
 Edit target
-| Select Display ↔ Change () to open the
+| Select Display ↔ Change (
 | --- |
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9a793aa7d6674b8abb1a24ef414c7809_LowRes.png)
+) to open the
 edit mode for the displayed target. Change the settings you want
-to adjust, then select Save ()
+to adjust, then select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+)
 to confirm.
 |
 
 |
 Delete target
-| Select Display ↔ Change () and then
+| Select Display ↔ Change (
 | --- |
-Delete Target System ()
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9a793aa7d6674b8abb1a24ef414c7809_LowRes.png)
+) and then
+Delete Target System (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio6c0fe3a92926482bb62f5016ccf9344d_LowRes.png)
+)
 to delete the displayed target. You need to confirm the deletion
 in an additional pop-up window.
 |
 
 |
 Create new target
-| Select Display ↔ Change () and then
+| Select Display ↔ Change (
 | --- |
-Create Target System ()
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9a793aa7d6674b8abb1a24ef414c7809_LowRes.png)
+) and then
+Create Target System (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiocb5e5b7a1c5f4322af587c1353ab986e_LowRes.png)
+)
 to add new targets.
 |
 
@@ -88,8 +102,12 @@ in the SAP GUI.
 
 - In the top bar of the RSDPS transaction, select Goto  Maintain Target System.
 
-- Select Display ↔ Change () and then
-Create Target System ().
+- Select Display ↔ Change (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9a793aa7d6674b8abb1a24ef414c7809_LowRes.png)
+) and then
+Create Target System (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiocb5e5b7a1c5f4322af587c1353ab986e_LowRes.png)
+).
 
 - Enter a Target Name in the pop-up window.
 
@@ -108,10 +126,14 @@ system.
 - Enter details about the connection to SAP Datasphere for the new target. For more
 information, see SAP Note [3590400](https://me.sap.com/notes/3590400).
 
-- (Optional) Select Check Connectivity () to test the connection
+- (Optional) Select Check Connectivity (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9329e2479b9642d8b076d913dfaf1857_LowRes.png)
+) to test the connection
 to SAP Datasphere and resolve connection errors as required.
 
-- Select Save () to save the new
+- Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) to save the new
 target.
 You can now use this target if you create new data
 subscriptions.
@@ -253,7 +275,9 @@ Note
 
 The Target Name
 column must first be toggled via
-Settings () to make it visible in the data
+Settings (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio39d8c98f9cd642cb99dd76ff635427e6_LowRes.png)
+) to make it visible in the data
 subscriptions list. This is different than in the
 SAP GUI and in the BW Modeling Tools, where it is
 visible by default. In the SAP BW/4HANA Cockpit it's

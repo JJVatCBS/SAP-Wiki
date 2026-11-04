@@ -55,18 +55,24 @@ language-independent texts) from BW InfoObjects, or extract
 transactional data from DataStore objects (advanced) (aDSOs).
 
 - In the field Source Name, select the BW object you want to extract
-data from. If you click on , a value help will open
+data from. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8fafb021d3a2487396d5d6b74c502b51_LowRes.png)
+, a value help will open
 where you can search for available objects in your BW system based on the
 selected source type. Search results will show their name and description.
 
 - In the field Target Name, select the target for the data subscription.
-If you toggle , you can view all available targets for your BW system including their name
+If you toggle
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio83053bc856d8477db5adbb2a9a30df96_LowRes.png)
+, you can view all available targets for your BW system including their name
 and description. For more information, see [Configuring Targets for the Data Product Generator](4da38647b3d041728236df20d5a0308b.html).
 
 - Select Save to save the data subscription.
 
 - Select the Package the data subscription will belong to for transport
-requests. If you click on , a value help will open
+requests. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8fafb021d3a2487396d5d6b74c502b51_LowRes.png)
+, a value help will open
 where you can search for available packages in your BW system. Search results
 will show their name and description.
 Note
@@ -151,7 +157,9 @@ OK to apply the them.
 
 - Go to the Settings tab and select the Process
 Variant if you want to use a process chain for the
-extraction. If you click on , a value help will
+extraction. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8fafb021d3a2487396d5d6b74c502b51_LowRes.png)
+, a value help will
 open, displaying all available process variants in your BW system
 including their name, the ID of the associated process chain, the
 process chain description, the trigger description and condition, and
@@ -229,7 +237,9 @@ In the SAP GUI you can create data subscriptions in the RSDPS transaction.
 
 - Open your BW system in the SAP GUI and call transaction RSDPS.
 
-- Select Create () among the icons in the
+- Select Create (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio15102dee722b45499367be6fe58a2c80_LowRes.png)
+) among the icons in the
 top bar.
 
 - In the field Source Type select from which type of BW object you
@@ -240,17 +250,25 @@ InfoObjects including hierarchies, master data, and texts, and DataStore
 objects (advanced) (aDSOs).
 
 - In the field Source Name, select the BW object you want to extract
-data from. If you click on , a value help will open,
+data from. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8f02209b224a46639067b140c95d6339_LowRes.png)
+, a value help will open,
 displaying all available objects in your BW system depending on selected
 type including their name, description and type (shown through a small
 icon). Select the row for the object you want to choose and confirm via
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8447db5b7ca2471ba1c50b7dfde162d1_LowRes.png)
 .
 
 - In the field Target Name, select the target for the data
-subscription. If you click on , a value help will open,
+subscription. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8f02209b224a46639067b140c95d6339_LowRes.png)
+, a value help will open,
 displaying all available targets for your BW system including the name,
 description, and whether they're a preferred target (marked through an X).
-Select the row for the target you want to choose and confirm via .
+Select the row for the target you want to choose and confirm via
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8447db5b7ca2471ba1c50b7dfde162d1_LowRes.png)
+.
 Note
 
 The
@@ -258,12 +276,16 @@ field Target Type will be automatically set to
 HDLFS (SAP HANA Cloud, data lake Files) as this is the only available
 target type for the Data Product Generator.
 
-- Select Save () in the top bar to save
+- Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) in the top bar to save
 the data subscription.
 
 - Select the Package the data subscription will belong
 to for transport requests and confirm via Save
-().
+(
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+).
 Alternatively, you can also create the data subscription as a local object
 by clicking on Local Object instead.
 Note
@@ -342,12 +364,16 @@ and scheduling data subscription runs via process chain
 Scheduling.
 If you want to run the data subscription via process chain, you also need to enter the process
 variant in a pop-up field Process
-Variant. If you click on , a value
+Variant. If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8f02209b224a46639067b140c95d6339_LowRes.png)
+, a value
 help will open, displaying all available process variants in
 your BW system including their name, description, the name
 of the associated process chain, and the conditions and
 period for the execution. Select the row for the process
-variant you want to choose and confirm via .Note
+variant you want to choose and confirm via
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8447db5b7ca2471ba1c50b7dfde162d1_LowRes.png)
+.Note
 
 The process type needs to be Load
 Process and Postprocessing - Data Provisioning
@@ -364,6 +390,8 @@ information, see [Assigning Data Subscriptions to a Process Variant](535a0f490c5
 set to be extracted via the data subscription. A value help will
 open, displaying all fields for which you can limit the data
 set. Enter conditions for the fields and confirm via
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio033f4d7c1902408d9d2f286bd9da624b_LowRes.png)
+
 to apply the filters.
 
 - Click on Edit Projection to define from which fields in the
@@ -371,24 +399,36 @@ InfoProvider the data subscription should extract data. A value
 help will open, displaying all available fields in the selected
 InfoProvider including their name, whether they're a key field,
 their description, their data type, and some further
-information. All selected fields are marked with an .
-If you click on the icon, you
+information. All selected fields are marked with an
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1e37fe2bf8624e75bf55ecf99a8baa60_LowRes.png)
+.
+If you click on the
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1e37fe2bf8624e75bf55ecf99a8baa60_LowRes.png)
+icon, you
 can add or remove the fields as needed. Confirm via
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8447db5b7ca2471ba1c50b7dfde162d1_LowRes.png)
+
 to save the changes.
 Note
 
 Key fields always need to be selected
 in the projection.
 
-- Select Save () in the top bar to save
+- Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) in the top bar to save
 the changes.
 
-- Select Activate Data Subscription () to activate
+- Select Activate Data Subscription (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob3fce2b60d5b4fd8855e91ad0e30c879_LowRes.png)
+) to activate
 the data subscription and make it executable. This will change its status
 from Inactive to Active.
 
 - Go back to the main screen, select the data subscription you have just
-created in the list, and choose Run () in the top
+created in the list, and choose Run (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob73259414ad741fbac28658c298a4938_LowRes.png)
+) in the top
 bar. This will start the data extraction according to the defined settings
 manually if you don't use a process chain.
 As a result, the local table

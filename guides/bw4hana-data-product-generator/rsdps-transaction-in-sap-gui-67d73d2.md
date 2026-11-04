@@ -58,10 +58,14 @@ Type
 | Type of the data subscription.
 | --- |
 
-- DSUB () -
+- DSUB (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio4ed92ba1633841c791e59fe13c355f96_LowRes.png)
+) -
 Transportable data subscription (TLOGO type)
 
-- SUBS () - Local data subscription (Cannot be
+- SUBS (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio340f186ea8054524a2a4898e705e3aa8_LowRes.png)
+) - Local data subscription (Cannot be
 transported)
 
 |
@@ -77,10 +81,14 @@ Status
 | Shows whether the data subscription has been activated or not.
 | --- |
 
-- Active () - Data subscription has been
+- Active (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio7510a2b6581b4329ab5ac1dc1a275fcf_LowRes.png)
+) - Data subscription has been
 activated and can be run.
 
-- Inactive () - Data subscription still needs to be
+- Inactive (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio464a86c5734b417f9f9ba9444ce36fa4_LowRes.png)
+) - Data subscription still needs to be
 activated to be run.
 
 |
@@ -90,11 +98,15 @@ Revision
 | Shows whether A (Active) and M (Modified) versions of data subscription are equal.
 | --- |
 
-- Equal () - A und M version of data
+- Equal (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio9911e73666504282bef5d5719312438a_LowRes.png)
+) - A und M version of data
 subscription have no differences. The object is ready to
 be transported.
 
-- Not Equal () - Data subscription has changes in M
+- Not Equal (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio6d142a9055604d228b4404fb6eb789f4_LowRes.png)
+) - Data subscription has changes in M
 version that haven't been activated yet. The object
 should be activated before you try to transport it.
 
@@ -119,7 +131,9 @@ Delta
 
 - If field is empty, full extraction is set.
 
-- If field shows a checkbox (),
+- If field shows a checkbox (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1e37fe2bf8624e75bf55ecf99a8baa60_LowRes.png)
+),
 delta extraction is set.
 
 |
@@ -135,11 +149,15 @@ Scheduling
 | Shows scheduling settings configured for data subscription.
 | --- |
 
-- Process Chain () -
+- Process Chain (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio622705d0eec141b5b49a451c65b396ce_LowRes.png)
+) -
 Data subscription will be scheduled via process
 chain.
 
-- None/Direct Execution () - Data subscription needs to be run
+- None/Direct Execution (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioad2189bac45845ffb2f6d6c96763c96a_LowRes.png)
+) - Data subscription needs to be run
 manually via the Run button.
 
 |
@@ -149,13 +167,19 @@ Last Run
 | Shows whether data subscription has already been run.
 | --- |
 
-- Not Run () - Data subscription hasn't been run
+- Not Run (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio36162c1a0b5647fc8eb7ca5eaa5a6d60_LowRes.png)
+) - Data subscription hasn't been run
 yet.
 
-- Last Run Successful () - Data subscription has been run yet
+- Last Run Successful (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob73daa22f6354e979c8ab052356fc3c1_LowRes.png)
+) - Data subscription has been run yet
 and last run was successful.
 
-- Last Run Failed () - Data subscription has been run yet,
+- Last Run Failed (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8083e152190a4addbe7ffa9e111767e1_LowRes.png)
+) - Data subscription has been run yet,
 but last run has failed.
 
 |
@@ -175,6 +199,8 @@ changed.
 
 ### RSDPS Toolbar - Configurations for Data Subscriptions List
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio06fe91874697419aa53fa7aa4c5c86f7_LowRes.png)
+
 You can perform the following configurations on the list of the data subscriptions:
 
 Configurations for Data Subscriptions List
@@ -187,6 +213,8 @@ Icon
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioc888d314a1c84126b0ae9c08877ec532_LowRes.png)
+
 | Select a data subscription from the list and display its
 | --- |
 details screen. For more information on the shown properties,
@@ -195,6 +223,8 @@ see [Data Subscription (DSUB and SUBS)](5ad3c27c5f8640b39ba26a838cd93c1b.html).
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio51b1805a77044ebe97841864c2200d02_LowRes.png)
+
 | Save the currently displayed list in a local file (e.g. HTML,
 | --- |
 Rich Text, …).
@@ -202,17 +232,23 @@ Rich Text, …).
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio5c520f7532c64d14aec0844c606feb74_LowRes.png)
+
 | Select all data subscriptions in the list.
 | --- |
 |
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioa63555099375428fb1caa858e304db08_LowRes.png)
+
 | Deselect all data subscriptions in the list.
 | --- |
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioec8eb7b0bf09410b9fd26049eb4a5bca_LowRes.png)
 
 | Sort the data subscriptions in the list in ascending order.
 | --- |
@@ -222,6 +258,8 @@ separate screen.
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiodbf326b07f494bfba993c58ee59f5420_LowRes.png)
+
 | Sort the data subscriptions in the list in descending order.
 | --- |
 You can specify the fields for which you want to sort in a
@@ -229,6 +267,8 @@ separate screen.
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiofcad6427f08e4b4296029b0157014c1c_LowRes.png)
 
 | Filter the list of data subscriptions according to certain
 | --- |
@@ -239,12 +279,16 @@ from the old SUBS format that still need to be migrated.
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio772ff87dd26247988c789a110097b87a_LowRes.png)
+
 | Refresh the list of data subscriptions to show latest changes
 | --- |
 according to new sorting criteria or performed actions.
 |
 
 ### RSDPS Toolbar - Actions for Data Subscriptions
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob2f459b76c684e60ac1502b041d1c57e_LowRes.png)
 
 You can perform the following actions on the data subscriptions:
 
@@ -258,11 +302,15 @@ Icon
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio15102dee722b45499367be6fe58a2c80_LowRes.png)
+
 | Create a new data subscription. For more information, see [Creating Data Subscriptions](f2e950ed4e8c475b8571478d6c2004c0.html).
 | --- |
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio75a6935781684ac88d4701ed1b529b72_LowRes.png)
 
 | Create a new data subscription based on a template of an existing data subscription.
 | --- |
@@ -270,6 +318,8 @@ For more information, see [Creating Data Subscriptions from Template](c2c90f4fce
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio094d20cb7df9430d9d4e432261be447e_LowRes.png)
 
 | Edit the selected data subscription. After the local table (file) has been created
 | --- |
@@ -279,12 +329,16 @@ information, see [Editing Data Subscriptions](06b37289aade411c8f289cac7095fc00.h
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiof06063fe84184eecac6243c68297267b_LowRes.png)
+
 | Delete the selected data subscription. This doesn't delete the local table (file) if
 | --- |
 it has already been deployed. For more information, see [Deleting Data Subscriptions](51f2dd2a17a14a43ba265c537cce47ed.html).
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiod7b492414a9748caa22b6df79b233974_LowRes.png)
 
 | Check the selected data subscription for any potential issues. In the results screen
 | --- |
@@ -295,6 +349,8 @@ Datasphere, and the local table (file).
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob73259414ad741fbac28658c298a4938_LowRes.png)
+
 | Run the selected data subscription. This manually starts an extraction operation from
 | --- |
 the InfoProvider into the local table (file). Alternatively, you
@@ -304,6 +360,8 @@ chain.
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1bd409ab58de4294aae4a410e3442039_LowRes.png)
+
 | Manually reset delta extractions for the selected data subscription. This is only
 | --- |
 relevant if you have delta extraction enabled as the extraction
@@ -311,6 +369,8 @@ mode. For more information, see [Setting Extraction Mode for the Data Product Ge
 |
 
 |
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio405288513c094fef91c813eb67994664_LowRes.png)
 
 | View more information about the last run for the selected data subscriptions. This is
 | --- |
@@ -320,12 +380,16 @@ otherwise you will receive an error message.
 
 |
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1675c87e92c7435187061e68b51adc93_LowRes.png)
+
 | View the data in the local table (file) of the selected data subscription. For more
 | --- |
 information, see [Viewing Local Table (File) and Getting Data Updates](c5b7a4fae2ce4b829914f9f825d6b471.html).
 |
 
 ### SAP GUI Toolbar - Access to other RSDPS Programs
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio26274ddced1645359aadcd42c65bb4f1_LowRes.png)
 
 In the topbar of the SAP GUI in the RSDPS transaction, you have access to further
 programs related to the Data Product Generator and the data subscriptions.

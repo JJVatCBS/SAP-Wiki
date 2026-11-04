@@ -29,3 +29,5 @@ the local table (file) in the Data Sharing Cockpit. The created data
 product can be accessed from the catalog in the SAP Business Data
 Cloud cockpit, where it can be delta shared to SAP Databricks for
 advanced AI/ML workflows on top of your BW data.
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio92f7980ae13447dbb7bac9525838f5a0_LowRes.png)

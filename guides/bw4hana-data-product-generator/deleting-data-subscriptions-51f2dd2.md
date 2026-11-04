@@ -49,7 +49,9 @@ In the SAP GUI you can delete data subscriptions in the RSDPS transaction.
 
 - Select the data subscription you want to delete from the list.
 
-- Choose Delete () among the icons in the
+- Choose Delete (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiof06063fe84184eecac6243c68297267b_LowRes.png)
+) among the icons in the
 top bar.
 
 - (Optional) If you have already run the data subscription and a local table (file) has been

@@ -49,12 +49,16 @@ by accessing the local table (file) directly from the data subscription.
 the local table (file) from within your BW system by selecting View
 Local Table (File) in the Local Table (File)
 column in the data subscriptions list (you might first have to toggle this column
-via Settings ()), or by using the equivalent
+via Settings (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio39d8c98f9cd642cb99dd76ff635427e6_LowRes.png)
+)), or by using the equivalent
 button in the Maintain Data Subscription screen.
 
 - In the RSDPS transaction in the SAP GUI, you can preview the remote data in the
 local table (file) by selecting the data subscription and then choosing
-Browse () in the top bar.
+Browse (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio1675c87e92c7435187061e68b51adc93_LowRes.png)
+) in the top bar.
 
 - In the Data Subscriptions view in the BW Modeling Tools, you can open the local
 table (file) via CTRL + Click on Show Local Table
@@ -62,7 +66,9 @@ table (file) via CTRL + Click on Show Local Table
 the data subscriptions list.
 
 - In the Data Builder in SAP Datasphere, you can open a preview of the data in the
-local table (file) by selecting View () in the top
+local table (file) by selecting View (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioeeeaf089f74648e7bb7c5246c9713e45_LowRes.png)
+) in the top
 bar.
 The preview will show the columns of the local table (file) and a select
 amount of records.
@@ -112,3 +118,5 @@ you have created a data product out of the local table (file) via the Data Shari
 Cockpit, the data in this data product is updated automatically if the data
 subscription pushed new data from the BW system and you merge it into the local table
 (file). There is no manual update for the data product required.
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioa15d6ce7258c470fbcc74df85f9efa9c_LowRes.png)

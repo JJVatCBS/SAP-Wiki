@@ -32,6 +32,8 @@ Note
 On SAP BW 7.5 systems you need to use the RSPDS transaction in the
 SAP GUI to maintain the data subscriptions.
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiobbe228893b804f0e8e6602df76306b22_LowRes.png)
+
 ### Data Subscriptions List - Columns and Values
 
 The columns in the data subscriptions list display information about certain properties
@@ -230,7 +232,9 @@ section. For each of these columns you can specify filters for the list
 (e.g. only show data subscriptions of type SUBS). For more information on
 the columns that can be added, see section "Columns and Values".
 
-- Via Easy Filter () you can switch to a
+- Via Easy Filter (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio63fac33e0a1a4550a114c88c5d0057c0_LowRes.png)
+) you can switch to a
 simplified search where you can enter search queries and filters in natural
 language.
 
@@ -253,15 +257,21 @@ sorting criteria or performed actions.
 |
 
 |
-Copy to Clipboard ()
+Copy to Clipboard (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioe3cbd7a9ac9b40eca27f1bcb75d05ef2_LowRes.png)
+)
 | Copy the data from the selected row in the list to the clipboard, allowing for easy
 | --- |
 copy/paste.
 |
 
 |
-Show More per Row () /
-Show Less per Row ()
+Show More per Row (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio195a54c49c9b4eb3bcb1a65fa4386a51_LowRes.png)
+) /
+Show Less per Row (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioef0c3cea54cf4a7a8508bb273d97c47b_LowRes.png)
+)
 | Expand or limit the information shown per row. This option is useful if you have
 | --- |
 configured many columns/properties to be shown for the data
@@ -270,7 +280,9 @@ all.
 |
 
 |
-Settings ()
+Settings (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio39d8c98f9cd642cb99dd76ff635427e6_LowRes.png)
+)
 | Open the Settings menu to configure which columns/properties
 | --- |
 of the data subscriptions are shown in the list and in which
@@ -280,10 +292,14 @@ more information on which columns can be shown, see section
 |
 
 |
-Export Table ()
+Export Table (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioef1a83154b144a2b8623753cc26d6d13_LowRes.png)
+)
 | Save the currently displayed list as a local file. If you select the dropdown besides
 | --- |
-the icon () and then choose Export
+the icon (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioeb9f85d66e93441fb2bb58743c5412df_LowRes.png)
+) and then choose Export
 As, you can make further settings for the file
 format and file name, as well as whether you want to consider
 current filters while exporting or split cells with multiple

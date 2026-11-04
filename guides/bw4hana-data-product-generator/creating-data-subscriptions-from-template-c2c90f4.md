@@ -70,7 +70,9 @@ In the SAP GUI you can create data subscriptions in the RSDPS transaction.
 - Select one of the data subscriptions in the list. This will be the data subscription
 you use as a template to create another data subscription.
 
-- Select Create from Template () amongst the icons in the top
+- Select Create from Template (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio75a6935781684ac88d4701ed1b529b72_LowRes.png)
+) amongst the icons in the top
 bar.
 The details and settings of the new data subscription will be filled in based
 on the information in the selected data subscription.Note
@@ -85,7 +87,9 @@ from the template. It's possible to change the selected BW InfoProvider
 Name), the extraction mode (Extraction Mode), and
 the scheduling settings (Scheduling).
 
-- Select Save () in the top bar to save the new data
+- Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) in the top bar to save the new data
 subscription based on the template.
 
 - Select the Package the data subscription will belong to for
@@ -103,5 +107,7 @@ Selection), and the projection (Edit Projection).
 In addition, you can now also still adjust the extraction mode (Extraction
 Mode) and scheduling settings (Scheduling).
 
-- (Optional) Select Save () in the top bar to save the data
+- (Optional) Select Save (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8912b2d9d65d48749e368afd66e521ee_LowRes.png)
+) in the top bar to save the data
 subscription with the adjusted properties.

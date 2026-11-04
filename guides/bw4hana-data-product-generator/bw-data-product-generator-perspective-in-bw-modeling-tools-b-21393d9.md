@@ -56,7 +56,9 @@ independently from this on their own.
 To access the BW Data Product Generator perspective, go to Window  Perspective  Open Perspective  Other... and select BW Data Product Generator.
 
 Alternatively, you can also open it by selecting the Open
-Perspective icon () in the top bar and
+Perspective icon (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiod09a2354ac9648beb3cca2a1b2d3124f_LowRes.png)
+) in the top bar and
 choosing BW Data Product Generator.
 
 ### Accessing the Eclipse Views
@@ -73,7 +75,9 @@ view.
 view.
 
 Alternatively, you can also find the views via search, which can be opened by using
-CTRL+3 or by selecting the search icon ().
+CTRL+3 or by selecting the search icon (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob6d6cc10b4844d81937c8ac9c0abbd1c_LowRes.png)
+).
 
 ### Scenario Generator View
 
@@ -242,13 +246,19 @@ Last Run
 | Shows whether data subscription has already been run and the result of the last run.
 | --- |
 
-- No Run () - Data subscription hasn't been run
+- No Run (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8a4c495de9fa413fa6f54db9d4c4ecf7_LowRes.png)
+) - Data subscription hasn't been run
 yet.
 
-- Success () - Data subscription has been run
+- Success (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio04b5d14585a44a93b2c710c991e1c07e_LowRes.png)
+) - Data subscription has been run
 yet and last run was successful.
 
-- Error () - Data subscription has been run
+- Error (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioa5b1deb4a2b348e5a34ebcb4b189bc04_LowRes.png)
+) - Data subscription has been run
 yet, but last run has failed.
 
 Note
@@ -295,14 +305,20 @@ configuration.
 - In the top bar of the Data Subscriptions view, you can access
 further options:
 
-- Refresh () - Refresh the list of data subscriptions to see
+- Refresh (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioccd5cc3b78784a40a274cb4d64b87845_LowRes.png)
+) - Refresh the list of data subscriptions to see
 latest changes or results of performed actions.
 
-- Open Link in Browser () -
+- Open Link in Browser (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio5e03d1c512ab4886816673466f94f0d9_LowRes.png)
+) -
 Open the main screen of the Data Subscriptions app in the SAP
 BW/4HANA Cockpit. (For more information, see [Data Subscriptions App in SAP BW/4HANA Cockpit](60146bc2b99941f2bdad39153fca5e9d.html)).
 
-- Preferences () - Open the
+- Preferences (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loioac915e05465541ec8d784ce545fc77b5_LowRes.png)
+) - Open the
 Data Subscriptions Preferences menu to
 adjust columns and information displayed in the list.
 

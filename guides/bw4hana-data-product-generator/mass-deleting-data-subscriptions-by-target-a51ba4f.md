@@ -25,7 +25,9 @@ The mass deletion can be performed with a dedicated ABAP report in the SAP GUI.
 You can access the report in two different ways:
 
 - Call transaction SE38 and enter the program name RSDDS_DELETE_BY_SOURCE, then select
-Execute () in the top bar.
+Execute (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio033f4d7c1902408d9d2f286bd9da624b_LowRes.png)
+) in the top bar.
 
 - Directly access the report in the RSDPS transaction by selecting Goto  Delete Data Subscriptions by Target
 
@@ -40,13 +42,17 @@ procedure:
 - Go to Selection Parameters and select the
 Target.
 You can do so either by entering the
-name of the target into the field or by selecting to open the value
+name of the target into the field or by selecting
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8f02209b224a46639067b140c95d6339_LowRes.png)
+to open the value
 help.
 In the value help you can see a list of all targets
 configured for your BW system including their names and descriptions. If
 you have configured a user-preferred target, it will be marked up with
 an X in the column Preferred Target. Here, select
-the row with the target you want to choose and then confirm via .
+the row with the target you want to choose and then confirm via
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8447db5b7ca2471ba1c50b7dfde162d1_LowRes.png)
+.
 
 - (Optional) Go to Deletion Options and select Simulate
 Deletion if you want to test the deletion operation based on
@@ -73,7 +79,9 @@ not working during the force deletion, the local tables (file) might not
 lose their read-only tag, which means they cannot be deleted afterwards
 in SAP Datasphere.
 
-- Select Execute () in the top
+- Select Execute (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio033f4d7c1902408d9d2f286bd9da624b_LowRes.png)
+) in the top
 bar of the report to perform the deletion operation.
 Confirm that you want
 to delete all data subscriptions for the selected target while

@@ -22,7 +22,9 @@ formation.
 
 Data subscriptions can have two types:
 
-- DSUB () - This is a transportable data subscription which has either been
+- DSUB (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio4ed92ba1633841c791e59fe13c355f96_LowRes.png)
+) - This is a transportable data subscription which has either been
 directly created in the DSUB format or migrated from the SUBS format via a
 dedicated migration report. Data subscriptions of type DSUB can be
 transported between different systems (e.g. production, development) like
@@ -30,7 +32,9 @@ any other TLOGO. With DSUB the data subscriptions also receive a dedicated
 TLOGO type (similar to ELEM for BW Queries or ADSO for DataStore objects
 (advanced)).
 
-- SUBS () - This is a local data subscription which cannot be transported between
+- SUBS (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio340f186ea8054524a2a4898e705e3aa8_LowRes.png)
+) - This is a local data subscription which cannot be transported between
 systems. Data subscriptions of type SUBS can be migrated to the TLOGO type
 DSUB via a dedicated migration report.
 Note
@@ -61,8 +65,12 @@ The information in a data subscription is saved as its properties, which can be 
 in different ways:
 
 - In the RSDPS transaction by opening the details screen of a data subscription via
-Details () or by
-opening its edit screen via Edit (). In the edit screen,
+Details (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio3c0c17ed317e4125b2408af02f450eec_LowRes.png)
+) or by
+opening its edit screen via Edit (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio094d20cb7df9430d9d4e432261be447e_LowRes.png)
+). In the edit screen,
 you can not only view all properties in a comprehensive format, but also
 change the editable ones.
 

@@ -58,7 +58,9 @@ searching for it via CTRL+3 or selecting it under Window  Show View  Other..
 Go to the tab Scenario Core Objects.
 
 -
-Select Add BW Object () by clicking on the icon in
+Select Add BW Object (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio52f06d88d31e49a8b380de7a6cbc3fe4_LowRes.png)
+) by clicking on the icon in
 the top bar or by right-clicking on the objects list and choosing the menu
 option.
 

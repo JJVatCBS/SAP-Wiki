@@ -140,9 +140,13 @@ object.
 
 - RSDPS transaction (SAP GUI):
 
-- Select a data subscription in the list and select Edit () to
+- Select a data subscription in the list and select Edit (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio094d20cb7df9430d9d4e432261be447e_LowRes.png)
+) to
 open the edit screen. Here choose Activate Data
-Subscription () to activate the
+Subscription (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loiob3fce2b60d5b4fd8855e91ad0e30c879_LowRes.png)
+) to activate the
 data subscription.
 Note
 
@@ -180,7 +184,9 @@ migration is a necessary prerequisite for the transporting operation.
 To migrate the data subscriptions, perform the following procedure:
 
 - Call transaction SE38 and enter the program name RSDDS_DSUB_MIGRATION, then select
-Execute () in the top bar.
+Execute (
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio033f4d7c1902408d9d2f286bd9da624b_LowRes.png)
+) in the top bar.
 As a
 result, the report TLOGO Migration for Data
 Subscriptions will open.
@@ -198,7 +204,9 @@ package to the request so the transport layer knows the system
 path.
 
 - In the field Package, choose the package the objects will belong to.
-If you click on , a pop-up will open in
+If you click on
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio8f02209b224a46639067b140c95d6339_LowRes.png)
+, a pop-up will open in
 which you can specify the package, as well as its transport layer (system
 path for objects in the package), and the maximum number of hits (how many
 objects can be assigned to the package).

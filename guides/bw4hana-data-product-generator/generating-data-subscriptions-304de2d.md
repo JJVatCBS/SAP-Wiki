@@ -87,6 +87,8 @@ Status
 | --- |
 subscriptions.
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio55d3ee8054cf4239bb1bf049c014e373_LowRes.png)
+
 indicates the data subscription is new and will be
 freshly created if you perform the
 operation.
@@ -101,6 +103,8 @@ to be extracted from the InfoProvider by selecting
 certain fields and adding conditions for extracting data
 from them.
 
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio0c66183beff947e6bfe19a5a8a6c1c68_LowRes.png)
+
 indicates selections have been defined, otherwise
 the field will be empty.
 |
@@ -113,6 +117,8 @@ subscription. With a projection you can limit the
 dataset to be provisioned from the InfoProvider by
 selecting certain fields that should be included or
 excluded.
+
+![Bild](https://help.sap.com/doc/ed919380760a44388ab90e6bb3e7480a/latest/en-US/loio485936e8625f4fac89d9df7368b19dce_LowRes.png)
 
 indicates a projection has been defined, in case of
 a full projection (default setting) the field will
