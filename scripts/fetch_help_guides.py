@@ -28,6 +28,7 @@ WARN = ROOT / "state" / "warnings_guides.md"
 SVC = "https://help.sap.com/http.svc"
 PAUSE = 0.3          # Sekunden zwischen Seitenabrufen (schonend für help.sap.com)
 LANG = "en-US"
+FORMAT = "2"         # erhöhen, wenn sich die Umwandlung ändert -> alle Guides einmal neu abrufen
 
 
 def parse_url(url: str) -> dict:
@@ -56,9 +57,30 @@ def flatten(nodes: list, path: tuple = ()) -> list[dict]:
     return out
 
 
-def body_to_md(s: str) -> str:
-    """HTML einer Hilfeseite in lesbares Markdown (Überschriften, Listen, Links, Tabellen, Code)."""
+SEEN_IMG = []   # erste Bildpfade je Lauf, zur Kontrolle im Log
+
+
+def _img(tag: str, base: str) -> str:
+    src = re.search(r'src="([^"]+)"', tag)
+    if not src or "sap_link.png" in src.group(1):          # Symbol "externer Link" weglassen
+        return ""
+    alt = re.search(r'alt="([^"]*)"', tag)
+    url = html.unescape(src.group(1))
+    if len(SEEN_IMG) < 3:
+        SEEN_IMG.append(url)
+    if url.startswith("//"):
+        url = "https:" + url
+    elif url.startswith("/"):
+        url = "https://help.sap.com" + url
+    elif not url.startswith("http"):
+        url = base + url
+    return f"\n![{(alt.group(1) if alt else '').strip() or 'Bild'}]({url})\n"
+
+
+def body_to_md(s: str, img_base: str = "https://help.sap.com/") -> str:
+    """HTML einer Hilfeseite in lesbares Markdown (Überschriften, Listen, Links, Tabellen, Code, Bilder als Link)."""
     s = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", s, flags=re.S | re.I)
+    s = re.sub(r"<img[^>]*>", lambda m: _img(m.group(0), img_base), s, flags=re.I)
     s = re.sub(r"<pre[^>]*>(.*?)</pre>", lambda m: "\n```\n" + re.sub("<[^>]+>", "", m.group(1)) + "\n```\n", s, flags=re.S)
     s = re.sub(r"<h([1-6])[^>]*>(.*?)</h\1>",
                lambda m: "\n" + "#" * (int(m.group(1)) + 1) + " " + re.sub("<[^>]+>", "", m.group(2)).strip() + "\n",
@@ -118,7 +140,8 @@ def fetch_guide(req, g: dict, state: dict) -> str:
     if not did:
         raise RuntimeError("deliverableMetadata ohne deliverable.id – Guide verschoben?")
     old = state.get(g["id"], {})
-    if old.get("buildNo") == build and old.get("deliverable_id") == did and (OUT / g["id"]).exists():
+    if (old.get("buildNo") == build and old.get("deliverable_id") == did and old.get("format") == FORMAT
+            and (OUT / g["id"]).exists()):
         return f"unverändert (buildNo {build})"
 
     first = get_json(req, "pagecontent", {"deliverableInfo": 1, "deliverable_id": did, "buildNo": build,
@@ -144,7 +167,8 @@ def fetch_guide(req, g: dict, state: dict) -> str:
         head = (f"---\nguide: {g['title']}\nproduct: {g['product']}\ntitle: \"{page['t']}\"\n"
                 f"page: {page['u']}\nurl: {link}\nsource_type: SAP Help\n---\n\n"
                 f"# {page['t']}\n\n*{' › '.join(page['path']) or g['title']} · [auf help.sap.com öffnen]({link})*\n\n")
-        (target / name).write_text(head + body_to_md(data.get("body") or ""), encoding="utf-8")
+        img_base = f"https://help.sap.com/doc/{u['deliverable_url']}/{d.get('versionName') or 'latest'}/{LANG}/"
+        (target / name).write_text(head + body_to_md(data.get("body") or "", img_base), encoding="utf-8")
         time.sleep(PAUSE)
         if (i + 1) % 100 == 0:
             print(f"  {i + 1}/{len(toc)} Seiten")
@@ -159,18 +183,20 @@ def fetch_guide(req, g: dict, state: dict) -> str:
         name = f"{slug(page['t'])}-{page['u'].removesuffix('.html')[:7]}.md"
         index.append(f"{'  ' * len(page['path'])}- [{page['t']}]({name})")
     (target / "README.md").write_text("\n".join(index) + "\n", encoding="utf-8")
-    state[g["id"]] = {"deliverable_id": did, "buildNo": build, "pages": len(toc),
+    state[g["id"]] = {"deliverable_id": did, "buildNo": build, "pages": len(toc), "format": FORMAT,
                       "checked": date.today().isoformat()}
-    return f"{len(toc)} Seiten gelesen (buildNo {old.get('buildNo')} → {build}), {errors} Fehler"
+    return (f"{len(toc)} Seiten gelesen (buildNo {old.get('buildNo')} → {build}), {errors} Fehler; "
+            f"Beispiel-Bildpfade: {SEEN_IMG}")
 
 
 def main() -> int:
     cfg = yaml.safe_load((ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
     guides = [g for g in cfg.get("help_guides", []) if g.get("url")]
+    checks = cfg.get("mirror_checks", []) or []
     STATE.parent.mkdir(parents=True, exist_ok=True)
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     warnings = []
-    if not guides:
+    if not guides and not checks:
         print("Keine help_guides konfiguriert")
     else:
         with sync_playwright() as pw:
@@ -178,7 +204,7 @@ def main() -> int:
             ctx = browser.new_context(locale=LANG)
             page = ctx.new_page()
             try:   # einmal die Hilfe öffnen, damit die Sitzung wie im Browser besteht
-                page.goto(guides[0]["url"], wait_until="domcontentloaded", timeout=90000)
+                page.goto((guides or checks)[0]["url"], wait_until="domcontentloaded", timeout=90000)
                 page.wait_for_timeout(3000)
             except Exception:
                 pass
@@ -188,6 +214,13 @@ def main() -> int:
                 except Exception as e:
                     warnings.append(f"{g['id']}: {e} ({g['url']})")
                     print(f"{g['id']}: FEHLER {e}")
+            for c in cfg.get("mirror_checks", []) or []:
+                try:
+                    import mirror_check
+                    print(f"Abgleich {c['id']}: {mirror_check.run(ctx.request, c, state)}")
+                except Exception as e:
+                    warnings.append(f"Abgleich {c['id']}: {e}")
+                    print(f"Abgleich {c['id']}: FEHLER {e}")
             browser.close()
     STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
     WARN.write_text(f"# Warnungen Guides, Lauf {date.today().isoformat()}\n\n"
