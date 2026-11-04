@@ -21,7 +21,8 @@ def changed(prefix: str) -> list[tuple[str, str]]:
         status, path = line[:2].strip(), line[3:]
         if path.endswith(".gitkeep"):
             continue
-        out.append(("neu" if status in ("??", "A") else "geändert", path))
+        kind = "neu" if status in ("??", "A") else "entfernt" if "D" in status else "geändert"
+        out.append((kind, path))
     return out
 
 
@@ -46,6 +47,21 @@ def main() -> int:
             md += ["", "```diff", *lines[:60], "```", ""]
     if not snaps:
         md.append("- keine Änderungen")
+    md += ["", "## Guides von help.sap.com (seitenweise)", ""]
+    guides = changed("guides")
+    guides = [(k, p) for k, p in guides if not p.endswith("README.md")]
+    if not guides:
+        md.append("- keine Änderungen")
+    for g in sorted({Path(p).parts[1] for _, p in guides if len(Path(p).parts) > 2}):
+        items = [(k, p) for k, p in guides if Path(p).parts[1] == g]
+        counts = {k: sum(1 for kk, _ in items if kk == k) for k in ("neu", "geändert", "entfernt")}
+        md.append(f"- **{g}**: " + ", ".join(f"{v} {k}" for k, v in counts.items() if v))
+        md += [f"  - [{Path(p).stem}](../../{p}) ({k})" for k, p in items[:20]]
+        if len(items) > 20:
+            md.append(f"  - … {len(items) - 20} weitere")
+    gw = ROOT / "state" / "warnings_guides.md"
+    if gw.exists() and "- keine" not in gw.read_text(encoding="utf-8"):
+        md += ["", "Achtung:", *gw.read_text(encoding="utf-8").splitlines()[2:]]
     md += ["", "## SAP Notes und KBAs", ""]
     md += [f"- {Path(p).stem} ({k})" for k, p in notes] or ["- keine neuen PDFs"]
     target = ROOT / "reports" / "weekly" / f"{y}-KW{w:02d}.md"
