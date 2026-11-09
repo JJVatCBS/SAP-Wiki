@@ -1,6 +1,6 @@
 # What's New – SAP Business Data Cloud
 
-Quelle: [https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b?locale=en-US](https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b?locale=en-US) · 115 Einträge · Stand 2026-11-04
+Quelle: [https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b?locale=en-US](https://help.sap.com/whats-new/31c53b47cac6482d89f167a1d2a4a50b?locale=en-US) · 115 Einträge · Stand 2026-11-09
 
 „Geändert“ = SAP hat den Eintrag nachträglich angepasst (alter Text: History dieser Datei).
 

@@ -1,6 +1,6 @@
 # What's New – SAP Analytics Cloud
 
-Quelle: [https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US](https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US) · 233 Einträge · Stand 2026-11-04
+Quelle: [https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US](https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US) · 233 Einträge · Stand 2026-11-09
 
 „Geändert“ = SAP hat den Eintrag nachträglich angepasst (alter Text: History dieser Datei).
 

@@ -18,7 +18,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830137",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio in SAP Business Data Cloud is now available in Google Cloud Platform in the following data center:\n- EU30 - Germany: Frankfurt\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -40,7 +40,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830138",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio in SAP Business Data Cloud is now available in the following data centers:\n- US20 - US West: Quincy, WA (Azure)\n- IN30 - India: Mumbai (Google Cloud Platform)\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -62,7 +62,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830139",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio is now available in AWS in the following data center:\n- North - Europe (Ireland)\nSee [Data Center Availability in SAP Reltio](8802c0865f844c0ba182a458444c9c6c.html).",
    "title": "Data Center Updates"
@@ -84,7 +84,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830140",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio is now available in Azure in the following data center:\n- US Central (Iowa)\nSee [Data Center Availability in SAP Reltio](8802c0865f844c0ba182a458444c9c6c.html).",
    "title": "Data Center Updates"
@@ -106,7 +106,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830141",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Google BigQuery is now available in Azure through SAP BDC Connect.\nSee [Provisioning SAP Business Data Cloud Connect](ccbd8fe7c2394009b546b73b1dd6c164.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud Connect</span>: Google BigQuery available in Azure"
@@ -128,7 +128,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830142",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio in SAP Business Data Cloud is now available in Azure in the following data center:\n- Netherlands: Amsterdam (EU20).\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -150,7 +150,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830143",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio is now available in Azure in the following data center:\n- North - Europe (Ireland)\nSee [Data Center Availability in SAP Reltio](8802c0865f844c0ba182a458444c9c6c.html).",
    "title": "Data Center Updates"
@@ -172,7 +172,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830144",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio is now available in Google Cloud Platform in the following data centers:\n- Belgium\n- Canada (Montréal)\n- Indonesia (Jakarta)\n- UK (London)\nSee [Data Center Availability in SAP Reltio](8802c0865f844c0ba182a458444c9c6c.html).",
    "title": "Data Center Updates"
@@ -194,7 +194,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830145",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio in SAP Business Data Cloud is now available in Google Cloud Platform in the following data center:\n- US Central Iowa (US30)\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -216,7 +216,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830146",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Databricks is now available in Azure in the following data centers:\n- Germany (Frankfurt) (EU22)\n- Japan (Tokyo) (JP20)\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -238,7 +238,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830147",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Snowflake is now available in Google Cloud Platform in the following data centers:\n- Europe (Frankfurt) (EU30)\n- US Central Iowa (US30)\n- Dammam (SA30) for regulated customers\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -260,7 +260,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830148",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Snowflake is now available in Azure in the following data centers:\n- Australia (AP20)\n- Japan (JP20)\n- Singapore (AP21)\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -282,7 +282,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830149",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP BDC Connect for Google BigQuery is now available in SAP Business Data Cloud. You can use BigQuery's analytical and AI capabilities directly on SAP data, without copying or moving it. SAP BDC unifies, governs, and provides data from SAP applications such as finance, supply chain, and HR.\nSee [Provisioning SAP Business Data Cloud Connect](ccbd8fe7c2394009b546b73b1dd6c164.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP BDC Connect</span> for Google BigQuery"
@@ -304,7 +304,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830150",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud is now available in the following data centers:\n- Azure Japan (JP20)\n- Azure Germany (EU22)\n- Google Cloud Platform Israel (IL30)\nThese data centers do not offer the SAP Databricks solution.\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -326,7 +326,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830151",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP HANA Cloud, SAP HANA database is now available in Google Cloud Platform in the following data center:\n- Japan/Osaka (JP30)\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -348,7 +348,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830152",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Snowflake is now available in Azure in the following data centers:\n- Canada (CA20)\n- Europe (Amsterdam) (EU20)\n- US (West) (US20)\n- US (East) (US21)\nSee Data Center Availability in [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -370,7 +370,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596830153",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The list of data centers in which SAP Business Data Cloud is available has been updated as follows:\n- SAP Business Data Cloud Connect is now live in Frankfurt (EU11) and Switzerland (CH20).\n- SAP Databricks is live in Australia (AP20) and Singapore (AP21).\n- SAP Business Data Cloud in JP30 can consume Databricks in SAP Business Data Cloud from JP31\n- SAP HANA Cloud is live in Japan/Osaka (JP30), Brazil (BR30) and Australia (AP30).\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "Data Center Updates"
@@ -392,7 +392,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844454",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Snowflake is now available as a solution extension for SAP Business Data Cloud. It supports bidirectional data sharing between SAP BDC and the Snowflake platform, and enables Snowflake’s powerful AI/ML and advanced data engineering capabilities to unify semantically rich, business-ready data from SAP and non-SAP sources.\nSee [Introducing SAP Snowflake](f4672900f59e4b878a3be16606f7d3e6.html).",
    "title": "Release of <span class=\"ph pname\" translate=\"no\">SAP Snowflake</span> in <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span>"
@@ -414,7 +414,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844455",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can share data products bidirectionally with SAP BDC Connect for Snowflake and SAP Snowflake on AWS.See [Provisioning SAP Business Data Cloud Connect](ccbd8fe7c2394009b546b73b1dd6c164.html).",
    "title": "Bidirectional data sharing with <span class=\"ph pname\">SAP BDC</span> Connect for Snowflake and <span class=\"ph pname\" translate=\"no\">SAP Snowflake</span>"
@@ -436,7 +436,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844456",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can now access semantic metadata directly in Unity Catalog when you share data products from SAP Business Data Cloud to SAP Databricks.See [Obtaining Access to Data Products in SAP Databricks](775c3c175b364d489a23df8caf741127.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span> data product metadata available in <span class=\"ph pname\" translate=\"no\">SAP Databricks</span>"
@@ -458,7 +458,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844457",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud is now available in the following data centers:\n- Switzerland - EU Access (CH20). This data center does not offer the SAP Databricks and the SAP Business Data Cloud Connect solutions.For more information, see EU Access on the [Provisioning SAP Business Data Cloud Applications](9a52d8eb22974365b9774f072cffd8c6.html) page.\n- Australia (AP20). This data center does not offer the SAP Databricks solution.\n- Singapore (AP21). This data center does not offer the SAP Databricks solution.\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "New Data Centers"
@@ -480,7 +480,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844458",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud is now available in the following data centers:\n- Dammam (SA30) data center for regulated customers,\n- Dammam (SA31) for non-regulated customers.\nNote that both data centers do not offer the SAP Databricks solution.\nSee [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "New Data Centers"
@@ -502,7 +502,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844459",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud is now available in the Frankfurt EU Access (EU11) data center. Note that this data center does not offer the SAP Databricks and the SAP Business Data Cloud Connect solutions.See [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).\nFor more information, see EU Access on the [Provisioning SAP Business Data Cloud Applications](9a52d8eb22974365b9774f072cffd8c6.html) page.",
    "title": "New Data Centers"
@@ -524,7 +524,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844460",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud, including all core solutions, is now available in the Canada (CA20) data center.See [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "New Data Centers"
@@ -546,7 +546,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844461",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud, including all core solutions, is now available in the following data centers: Korea (AP12), Brazil (BR10, BR20). See [Data Center Availability in SAP Business Data Cloud](e8f964c4f7ea47c9ba9dda85c4470fc0.html).",
    "title": "New Data Centers"
@@ -568,7 +568,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844462",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "By using the SAP Business Data Cloud Capacity Unit Estimator, you can estimate the amount of capacity units necessary for using SAP Business Data Cloud Connect. Log into [SAP for Me](https://me.sap.com/home) to access the estimator.",
    "title": "SAP Business Data Cloud Connect Available in the SAP Business Data Cloud Capacity Unit Estimator"
@@ -590,7 +590,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844463",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Improved usability in the Available and Installed tables allows you to sort by all columns and expand them for better visibility, streamlining the search for intelligent applications and data packages. Tooltips provide quick access to information about recently viewed items, enhancing efficiency.",
    "title": "Usability Enhancements in the <span class=\"ph uicontrol\">Intelligent Applications and Data Packages</span> Section."
@@ -612,7 +612,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844464",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The onboarding guide for SAP Business Data Cloud is now available.\nSee [Onboarding](d1fe7465c51840d996560f68fa574f0a.html).",
    "title": "Onboarding Guide"
@@ -634,7 +634,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844465",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can provision the SAP Business Data Cloud (SAP BDC) connector for supported external systems to set up a dedicated, integrated environment for advanced data processing within SAP BDC.\nSee [Provisioning SAP Business Data Cloud Connect](ccbd8fe7c2394009b546b73b1dd6c164.html).",
    "title": "Provision <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span> Connector for Supported External Systems"
@@ -656,7 +656,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844466",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud Connect (SAP BDC) is now available on major hyperscalers: Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure. This capability facilitates secure zero-copy sharing as well as the receiving of data products via Delta Sharing between SAP BDC and supported external systems hosted on these cloud platforms. Customers using both SAP BDC and Databricks can now share data products bidirectionally to accelerate their advanced analytics and AI/ML use cases.\nSee [Provisioning SAP Business Data Cloud Connect](ccbd8fe7c2394009b546b73b1dd6c164.html).",
    "title": "Release of <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud Connect</span>"
@@ -678,7 +678,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844467",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Databricks, as a part of SAP Business Data Cloud, unifies semantically rich, business-ready data with industry-leading AI/ML and data engineering capabilities.\nSAP Databricks is fully integrated with the SAP landscape and provides a serverless offering that enables you to bring SAP and non-SAP data together in a pro-code environment for generating business insights.\nSee [Introducing SAP Databricks](14d8ea37b85d49febf897fb43c7695bb.html).",
    "title": "Release of <span class=\"ph pname\" translate=\"no\">SAP Databricks</span> in <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span>"
@@ -701,7 +701,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844468",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Release of SAP Business Data Cloud. For more information, see [SAP Business Data Cloud](https://help.sap.com/docs/SAP_BUSINESS_DATA_CLOUD).",
    "title": "Release of <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span>"
@@ -723,7 +723,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844469",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can now configure system mappings in SAP Business Data Cloud to pair source and target data-product provider system instances. When an SAP Datasphere user transports a package from one tenant to another, the target space automatically connects to the correct data-product provider system based on the configured mapping, removing the need for manual reconnection after import.\nOptionally, you can specify a target space ID to control which space in the destination tenant receives the imported content.\nFor more information, see [System Mapping for Content Transport Between SAP Datasphere Tenants](4a4024c409ef427ebe285b8e60a9e58a.html).",
    "title": "System Mappings for Content Transport Between <span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Tenants"
@@ -745,7 +745,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844470",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can track the user activities related to the intelligent applications and data packages in the Activities section of the SAP Business Data Cloud cockpit. The tracking includes the installation, uninstallation, update, repair, and cleanup of intelligent applications. It also includes the activation, deactivation, updates, repair, and cleanup of the data packages. Along with tracking the activities, you can verify the correlation ID per activity and the description in case of failure. See [Tracking User Activities](782ced427c2447feb554bfca21e9432d.html).",
    "title": "Tracking User Activities"
@@ -768,7 +768,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844471",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can provision an SAP Cloud Identity Services tenant for your SAP Business Data Cloud to allow users to sign in to the SAP BDC tenant and to other SAP products using single sign-on (SSO). See [Authentication Options](8e347ccfcd554a7b8d165154a662feca.html).\nNote\nBundled SAP Cloud Identity Services Tenants will follow a controlled release. You will only see this feature if it is available for your tenant. See SAP Note [3619907](https://me.sap.com/notes/3619907).",
    "title": "Bundled SAP Cloud Identity Services Tenant"
@@ -791,7 +791,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844472",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "In the Portfolio & Products dashboard of SAP for Me, individual access cards were replaced by a single unified card that brings all of your purchased product suites into one place. See [Provisioning and Configuring SAP Business Data Cloud in SAP for Me](c85d4c8777b54a1ea57bc73991432f04.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span> Product Suite in <span class=\"ph pname\" translate=\"no\">SAP for Me</span>"
@@ -813,7 +813,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844473",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP S/4HANA Cloud Private Edition now supports the automatic detection of custom fields and entities for data products that use incremental updates. The minimum version required is 2025 SP02.\nFor more information, see [Working with Data Product Extensions](254f6da5b34547f48d65cb3233288c12.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP S/4HANA Cloud Private Edition</span> Support for Incremental Data Product Extensions"
@@ -835,7 +835,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844474",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud now displays the release state of intelligent content, data packages, and data products. This ensures transparency and helps you understand whether a resource is active, deprecated, or no longer available.\nFor more information, see [Release States of Data Products and Intelligent Content](7ccb6967053745d1bf0beb29f3924618.html)",
    "title": "Release States for Intelligent Content and Data Packages"
@@ -857,7 +857,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844475",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud now identifies issues within the data product activation pipeline and provides targeted, actionable guidance to help you or SAP Technical Support to resolve any issues. This reduces the time needed to identify and resolve data product activation issues and improves the overall transparency of the data product activation and intelligent content installation flows.For more information, see [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Improved Diagnostics for Data Product Activation"
@@ -879,7 +879,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844476",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud now automatically detects the custom fields and entities created in your SAP source systems and makes them available in your data products. If your organization adds further custom fields or entities, these changes are detected and become available in your data products during the next replication cycle.\nFor more information, see [Working with Data Product Extensions](254f6da5b34547f48d65cb3233288c12.html).",
    "title": "Automatic Addition of Custom Fields to Data Products"
@@ -901,7 +901,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844477",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Business Data Cloud now supports side-by-side installation of multiple major versions of intelligent content and data products on the same source system. Each major version operates independently — activating, updating, or deactivating one version does not affect other versions. This allows you to safely test and migrate workflows to new major versions without disrupting existing processes.For more information, see [Working with Intelligent Content](35b64d44efd54502a935f67ba66ffd4e.html).",
    "title": "Side-by-side major version installation"
@@ -923,7 +923,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844478",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can export configurations made in the c Capacity Unit Estimator to a JSON file, for sharing or saving for future reference, and you can now import a JSON file with pre-set configurations to the Capacity Unit Estimator. For more information, see [SAP Business Data Cloud Capacity Unit Cost Estimator](https://help.sap.com/docs/business-data-cloud/administering-sap-business-data-cloud-dev/sap-business-data-cloud-capacity-unit-cost-estimator?state=DRAFT&version=DEV).",
    "title": "Import/Export CU Estimations from/to a JSON file"
@@ -945,7 +945,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844479",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can now install intelligent content that combines data products from multiple systems. Each source system creates (or re-uses) its own ingestion and preparation spaces to contain its data products, and an additional cross-source space is created that combines data from all the source systems. The source-specific and cross-source spaces are identified by aliases.\nFor more information, see [Working with Intelligent Content](35b64d44efd54502a935f67ba66ffd4e.html).",
    "title": "Intelligent Content Combining Data Products from Multiple Systems"
@@ -967,7 +967,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844480",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Release notes are now provided for installed intelligent content and active data packages, enabling you to review what's new in each version before proceeding with the update, make informed decisions on the desired updates, and plan updates according to a schedule that works best for the organization\nSee [Updating Intelligent Content](0d808e429996407b99b6a1da3c530fed.html) and [Updating Data Products](5d95eb092d4b4988952c6eb60e4319ba.html).",
    "title": "View Release Notes for Available Updates"
@@ -989,7 +989,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844481",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can select data products in a data package for activation, deactivation, and updates in bulk. This streamlines your workflows and saves time when managing multiple data products within large data packages. See [Activating Data Products](e43827838e48463fb768c18d841e91e3.html), [Updating Data Products](5d95eb092d4b4988952c6eb60e4319ba.html), [Deactivating Data Products](71222509a306408a9d144de4a4664881.html).",
    "title": "Bulk Management of Data Products"
@@ -1011,7 +1011,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844482",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Validation checks have been introduced that verify target system compatibility and readiness before installing or updating intelligent content and related objects. These checks reduce deployment failures and ensure smoother operations across your SAP Business Data Cloud landscape.\nSee [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Updating Intelligent Content](0d808e429996407b99b6a1da3c530fed.html).",
    "title": "Validation Checks for Intelligent Content Installation and Update"
@@ -1033,7 +1033,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844483",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Intelligent applications are renamed to intelligent content. Intelligent content includes prebuilt SAP Analytics Cloud stories and MyMetrics (KPIs) for various SAP lines of business or solution areas, along with flows, views, analytic models and other SAP Datasphere objects to prepare data for them.\nIntelligent content is built on data products, supports analytics, planning, and AI and machine learning use cases, and can be simply and seamlessly installed from the SAP Business Data Cloud cockpit.\nFor more information, see [Working with Intelligent Content](35b64d44efd54502a935f67ba66ffd4e.html).",
    "title": "Intelligent Content"
@@ -1055,7 +1055,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844484",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The SAP Business Data Cloud cockpit administrator or Data engineer can now download a file containing records that got dropped during the data pipeline run, from the data product pipeline details page. If the reason provided for the dropping of records is due to issues with source system data, then these records can be fixed on the source system. For any other issue, create a support ticket. For more information, see [Monitoring Data and Pipeline Health in SAP Business Data Cloud](1e7306aea9dc497cba27705f88bd87ef.html).",
    "title": "Accessing Records Dropped During Data Pipeline Run"
@@ -1077,7 +1077,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844485",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Now you can deactivate data products currently in use by intelligent applications, while receiving alerts regarding potential impacts and required follow-up actions. This provides greater control over data management.\nNote that this action might have a temporary impact on the business data exposed by the data product. As soon as you have re-activated the data product and restarted the replication flow, the application becomes fully functional again.\nFor more information, see [Deactivating Data Products](71222509a306408a9d144de4a4664881.html).",
    "title": "Deactivation of Data Products Used by Intelligent Applications"
@@ -1099,7 +1099,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844486",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Before you start an installation, activation, or version update, the system performs a pre-flight validation check to ensure that all required objects are available for the included data products.\nIf the pre-flight check identifies missing objects, the system displays a list with links to the relevant SAP Notes that describe how to resolve each issue.\nIf no objects are missing, the installation or activation continues automatically after the validation check is completed.\nFor more information, see [Managing Validation Check Results](87c3eb1a5b784b469d4bbb86a9778a21.html).",
    "title": "Pre-Installation/Activation/Update Check"
@@ -1121,7 +1121,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844487",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Now you can activate, deactivate and update individual data products independently of data packages. This enables granular control over the data products that are available in the catalog, better visibility into data product lifecycle in SAP Business Data Cloud cockpit, and allows administrators to manage resources more efficiently by activating only the needed products.\nFor more information, see [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Individual Data Product Management"
@@ -1143,7 +1143,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844488",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Visibility into data pipeline health, system connectivity, and high-level data-product specific data pipeline processing information. BDC cockpit admins and data engineers can now proactively identify issues and monitor installation/activation progress in SAP Business Data Cloud.\nFor more information, see [Monitoring Data and Pipeline Health in SAP Business Data Cloud](1e7306aea9dc497cba27705f88bd87ef.html).",
    "title": "End-to-end Data Observability and Monitoring"
@@ -1165,7 +1165,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844489",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Introducing new and more granular product statuses, which are aligned with the Catalog and provide a more detailed view of data product provisioning and lifecycle.\nThese statuses allow you to monitor each data product more effectively and take action quickly when issues occur.\nSee [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Data Product Statuses"
@@ -1187,7 +1187,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844490",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "In cases of expiry or termination of the commercial entitlement, a dedicated status is now displayed for the intelligent application/data package, providing visibility over the missing entitlement to both SAP Business Data Cloud cockpit users and the SAP back office. In additon, automatic uninstallion/deactivation in such cases no longer takes place, reducing the risk of data loss. Now only the BDC cockpit user can uninstall intelligeng applications or deactivate data packages.\nFor more information, see [Uninstalling Intelligent Content](b0c96bdf43204f46b9a195c1b28ede3b.html) and [Deactivating Data Products](71222509a306408a9d144de4a4664881.html).",
    "title": "Uninstallation/Deactivation in case of Commercial Entitlement Loss"
@@ -1209,7 +1209,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844491",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Version incompatibility with data provider systems is now enforced at the point of activation/installation, with clear error messaging and disabled actions where needed. This improves the BDC Cockpit administrator experience since all available intelligent applications/data packages for which entitlement exists, regardless of version incompatibility, are now listed in the Available tab. See [Minimum System Version Incompatibility for Intelligent Content](96a5b59273824c1ba07ffe3d52003e78.html) and [Minimum System Version Incompatibility for Data Packages](5b87aa50aa9b45d781a93ac85f3feba4.html).",
    "title": "Intelligent Application/Data Package Incompatibility Alerts"
@@ -1231,7 +1231,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844492",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "If your SAP Datasphere is part of an SAP Business Data Cloud formation, you can now install a single intelligent application multiple times for different source systems. Each source system creates (or re-uses) its own ingestion space to contain its data products. Source-specific preparation and application spaces identified by an alias are created for each instance of the intelligent application.\nSee [Working with Intelligent Content](35b64d44efd54502a935f67ba66ffd4e.html).",
    "title": "Installing an Intelligent Application for Two or More Source Systems"
@@ -1254,7 +1254,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844493",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can now see the installation status of individual data products and content objects within a data package or intelligent application, in addition to the already existent general status. This allows you to monitor each component's installation more effectively and take action if required when there is a failed installation status.For more information, see [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Installation Statuses"
@@ -1277,7 +1277,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844494",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "To further improve recovery, you can clean up artifacts from the failed installation and uninstallation, or activation and deactivation, directly from the Intelligent Applications and Data Packages page, enabling you to reset your environment to its initial state.\nSee [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Installation / Activation Issue Cleanup Support"
@@ -1300,7 +1300,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844495",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "You can now test connectivity to your source systems at any time, and in addition, benefit from the automatic connectivity test that's triggered when selecting a source system in the Installation/Activation dialog. This allows you to make sure that the installations and activations proceed successfully. See [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html) and [Activating Data Products](e43827838e48463fb768c18d841e91e3.html).",
    "title": "Connectivity Test"
@@ -1323,7 +1323,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844496",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Insight apps have been renamed to intelligent applications.\nIntelligent applications are low-code applications that are delivered to the user as SAP Analytics Cloud stories (or analytical applications), supported by SAP Datasphere content. See [Working with Intelligent Content](35b64d44efd54502a935f67ba66ffd4e.html).",
    "title": "Intelligent Applications"
@@ -1346,7 +1346,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844497",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "To further improve recovery from installation or activation issues, the following options are now available:\n- You can retry directly from the intelligent application / data package page, enabling you to maintain fully functioning landscapes.\n- You can locate the detailed failure reason on the Intelligent Applications and Data Packages page, which facilitates failure investigation and ensures a quicker turnaround with the support team.\nSee [Installing Intelligent Content](6075653ac16e481aa2e9e9244131f000.html), [Uninstalling Intelligent Content](b0c96bdf43204f46b9a195c1b28ede3b.html), [Activating Data Products](e43827838e48463fb768c18d841e91e3.html), and [Deactivating Data Products](71222509a306408a9d144de4a4664881.html).",
    "title": "Installation / Activation Issue Recovery Improvement"
@@ -1368,7 +1368,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844498",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Users can review release state information for SAP Datasphere assets. Object release states help catalog users understand an asset’s lifecycle stage. They can also filter to find assets at different release states in their lifecycle.\nSee [Catalog Asset Details](afccc581146542c485a52563167e23cc.html).",
    "title": "Release State Metadata for <span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Assets"
@@ -1390,7 +1390,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844499",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When account dimension members are added, deleted, or updated for classic models, the catalog automatically extracts the latest metadata from the SAP Analytics Cloud source system. This ensures that the catalog assets are current with account dimension member changes.",
    "title": "Automatic Extraction of Account Dimension Members from <span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Classic Models"
@@ -1412,7 +1412,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844500",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The data product details page shows the lifecycle status. Consumers can filter by lifecycle status, such as active, provisioning, or data-loading. This information helps data stewards track and manage data products throughout their operational lifecycle.\nSee [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html).",
    "title": "Data Product Life Cycle Status"
@@ -1434,7 +1434,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844501",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The data product details page provides improved visibility of object (or entity) and column release statuses. Consumers can use this information to identify deprecated or decommissioned data objects and their recommended successors. This enables proactive migration planning and helps avoid dependencies on obsolete data during modeling and integration activities.\nSee [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html).",
    "title": "Release Status Indicators for Data Product Objects and Columns"
@@ -1456,7 +1456,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844502",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Changes to data product governance provide a better framework for domain management, access control, and usage agreements:\n- Domains: Organizations can define clear ownership of data products and set the terms and conditions for their usage (see [Governing Data Products](978e082b38ea43468877e5e676bd358d.html)).\n- Access workflows: Data stewards have more control over who can access data products. Rather than relying on direct permissions and manual sharing, data product access shifts to a request-based model. These controlled workflows ensure compliance and traceability of data product consumption across the landscape (see [Obtaining Access to Data Products](998fb5f447d04021baf497375261c9d1.html)).\nFor more information about data governance, read the blog: [Data Product Data Governance in SAP Business Data Cloud](https://community.sap.com/t5/technology-blog-posts-by-sap/data-product-data-governance-in-sap-business-data-cloud/ba-p/14470556).",
    "title": "Data Product Governance Improvements"
@@ -1478,7 +1478,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844503",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Version history tracking for data products now enables reviewing previous and latest available versions. Use this to understand how data products have evolved over time and assess the potential impact of updates before implementing newer versions in your environment.\nSee [Viewing Data Product Version History](f1f90e4a57f64e76a3492315a4154934.html).",
    "title": "View Data Product Version History in the Catalog"
@@ -1500,7 +1500,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844504",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The Impact and Lineage Analysis Diagram now includes the target system in the impact of a shared data product. This enhancement provides a clearer view of data impact across all affected systems. You can see how data products are consumed beyond SAP Datasphere installations, which improves impact assessment and strengthens data governance across the entire data ecosystem.\nSee [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html).",
    "title": "Impact and Lineage Analysis Diagram Includes Target Systems for Shared Data Products"
@@ -1522,7 +1522,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844505",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The catalog can now extract metadata for the following SAP Analytics Cloud asset types:\n- Add-in Workbook\n- Analysis Workbook\n- Composite\n- Content Link\n- Dataset\n- Uploaded File\nThe metadata extracted includes the asset's name, the dates when it was created and changed, its container name, path, description, and other. The impact and lineage analysis diagram will be available for these objects in a future release.\nSee [Connecting to SAP Analytics Cloud Systems](27a4f9620761458dbc60cf9cf853989d.html).",
    "title": "Enhanced <span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Asset Type Support"
@@ -1544,7 +1544,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844506",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The data product details page now shows the associated intelligent applications and data packages. When you review an inactive data product, you can use this information to quickly identify the resource that needs to be activated so that the data product can be installed to a SAP Datasphere space or shared to a target system.\nSee [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html).",
    "title": "Intelligent Application and Data Package References Available in the Data Product Details"
@@ -1566,7 +1566,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844507",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The Data Protection and Privacy tag hierarchy is a system-defined tag hierarchy that helps identify data products containing personal data or sensitive personal data. During metadata extraction, the system automatically applies a data protection and privacy tag when it identifies a data product with personal data or sensitive personal data. Note\nThe catalog doesn't collect or store personal data or sensitive personal data.\nSee:\n- [Using Hierarchical Tags](e5d46e7bcb1e4fb5bbcef852fd35ba87.html)\n- [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html)",
    "title": "Display Data Protection and Privacy Tags in the Catalog"
@@ -1588,7 +1588,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844508",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "A new link type (dashed line) has been added to the Impact and Lineage Analysis diagram for Data Transfer Processes (DTPA) and their associated Transformations (TRFN) across all BW systems. You can gain complete data traceability control by visualizing how one or more transformations are connected to and used within Data Transfer Processes (DTPs), enabling better understanding of data flow and dependencies in your BW environment.\nSee [Catalog Asset Details](afccc581146542c485a52563167e23cc.html).",
    "title": "Impact and Lineage Analysis Diagram Support for BW Data Transfer Process"
@@ -1610,7 +1610,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844509",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Datasphere, Data Composer is a service available within SAP Business Data Cloud. It harmonizes and unifies customer data from multiple available data products. The composer consolidates disparate records into comprehensive customer profiles by using configurable unification rules and advanced identity resolution.\nUsers can choose between deterministic models, which use rule-based and exact matching, or probabilistic models, which use machine learning for flexible matching. These models help resolve identities, handle data conflicts, and merge records based on data quality, ingestion timestamp, and rule priority. The composer also supports mapping and transforming source data attributes to a fixed output schema. This ensures data normalization and quality.\nThe harmonized profiles are output as a data product called Potential Customer Profile. Other systems can then consume this data product.\nThe data composer helps organizations create a single, trusted view of customers by integrating fragmented data from different business units and systems. This improves data quality, supports compliance, and enhances customer insights for analytics, personalization, and operational efficiency. By automating identity resolution and profile unification, the composer reduces manual data reconciliation, accelerates time-to-value, and supports scalable, secure data management in complex enterprise environments.\nFor more information, see [SAP Datasphere, Data Composer](15139eeaa2a440d1a8f0a46fd79d2bd7.html).",
    "title": "Share Data Products to <span class=\"ph pname\" translate=\"no\">SAP Datasphere</span>, Data Composer"
@@ -1632,7 +1632,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844510",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When viewing the Impact and Lineage Analysis diagram for an SAP Analytics Cloud model or story that uses data from a live data connect, users will be able to see BW Query (ELEM) objects from SAP BW 7.5 in the analyzed object's lineage.\nSee [Catalog Asset Details](afccc581146542c485a52563167e23cc.html).",
    "title": "BW Query Objects (ELEM) from <span class=\"ph pname\" translate=\"no\">SAP BW</span> 7.5 Included in the Impact and Lineage Analysis Diagram for an <span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Model or Story"
@@ -1654,7 +1654,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844511",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "As users discover data products in the catalog, they can get more information about objects for a data product's API from the data product details page. This additional information will help users better understand a data product before they install it to an SAP Datasphere space or share it to a target system.\nSee [Data Product Details](71f4d1599dba4aa59e6682a314650cf7.html).",
    "title": "Information About Objects for a Data Product's API is Available"
@@ -1676,7 +1676,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844512",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Organizations transition to using SAP Business Data Cloud by rewiring their standalone SAP Datasphere and SAP Analytics Cloud systems to SAP Business Data Cloud. The migration of catalog content begins automatically once you add the SAP Datasphere system to an SAP Business Data Cloud formation.\nIf you had previously rewired your systems before this feature was available, you can still migrate the catalog content from the previous setup to the new one. During the catalog migration, personal data in the form of user favorites will also be migrated.\nSee [Migrating Catalog Content to SAP Business Data Cloud](b26705d20f4f4ebba77175276127b48f.html).",
    "title": "Migrate Catalog Content from a Standalone <span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Setup to an Integrated Setup with <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span>"
@@ -1698,7 +1698,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844513",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When sharing data products, you'll be able to see the following additional system details: system type, deployment region, and system ID.",
    "title": "Provide Additional System Details when Sharing Data Products"
@@ -1720,7 +1720,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844514",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Enhanced monitoring of metadata extraction for data products helps users with the Catalog Administrator role ensure that the content in the catalog is reliable.\n- Metadata extraction errors are detected early and are more visible in the extraction summary logs and on the data product details page.\n- Source systems that have data products or APIs with extraction issues are automatically resynchronized with the catalog to update the data products.\n- Manually synchronizing source systems will also update data products that have errors.\nCatalog users won't be able to install data products that have outdated APIs.\nSee [Installing Data Products](https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/ea7cb802cbea47b39a441888873c3a49.html).",
    "title": "Improved Metadata Extraction Monitoring for Data Products"
@@ -1742,7 +1742,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844515",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Users with the appropriate privileges can share data products to SAP HANA Cloud.",
    "title": "Share Data Products to <span class=\"ph pname\" translate=\"no\">SAP HANA Cloud</span>"
@@ -1764,7 +1764,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844516",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Users can share data products from existing Databricks systems to SAP Business Data Cloud.",
    "title": "Share Data Products from Existing Databricks Systems to <span class=\"ph pname\" translate=\"no\">SAP Business Data Cloud</span>"
@@ -1786,7 +1786,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844517",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Data subscriptions created by the data product generator in SAP BW∕4HANA systems are available in the catalog. With them, SAP BW is pushed to SAP Datasphere local tables. When viewing the details page for a data subscription, you will be able to see its properties and open a link to the target SAP Datasphere local table. Here, you can analyze the object by viewing the Impact and Lineage Analysis diagram.\nNote\nThe minimum version required is SAP BW∕4HANA 2023 Support Package Stack 4 or newer. See SAP Note [3601550](https://me.sap.com/notes/3601550).\nSee [Connecting to an SAP BW System](https://help.sap.com/docs/SAP_DATASPHERE/aca3ccb4b2f84eb8b6154e8fd2812c0e/b350d7c6e88c4f089d381dfe6feee792.html).",
    "title": "Data Subscription (DSUB) Objects Available in the <span class=\"ph uicontrol\">Assets</span> Collection"
@@ -1808,7 +1808,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844518",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When viewing the Impact and Lineage Analysis Diagram diagram for an object, the container that represents the source system will show a user-friendly business or technical name that is extracted from the source system. Containers for systems not connected to the catalog show the system type and the word \"unmonitored\".",
    "title": "Display User-Friendly System Name in <span class=\"ph uicontrol\">Impact and Lineage Analysis</span> Diagram"
@@ -1831,7 +1831,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844519",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Users with the appropriate permissions can share data products to existing Databricks systems.\nSee .",
    "title": "Share Data Products to Existing Databricks Systems"
@@ -1854,7 +1854,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844520",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "After an application upgrade, source systems with detected changes are automatically synchronized with the catalog. Changes may include correcting metadata inaccuracies or resolving errors and bugs within data products. These updates to data products and assets do not update the object’s version number.",
    "title": "Automatic Synchronization after Application Upgrade"
@@ -1877,7 +1877,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844521",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "In SAP Datasphere, data providers can use the data sharing cockpit to create data products with the Delta Sharing output port. These data products are then available in the Data Products collection. This enhancement unifies how catalog users search for and access data products in the catalog.\nDelta Share data products are created by data providers that have a profile with the marketplace visibility option set to Formations. See [Creating Delta Share Data Products](https://help.sap.com/docs/SAP_DATASPHERE/e4059f908d16406492956e5dbcf142dc/b07e95d07a1e4569b87d9bb57b732bcf.html).\nSAP Datasphere systems can now be a source system for both assets and data products. To help users locate the systems on the Metadata Extractions, the source systems are organized into groups based on the objects extracted: assets only, APIs only, and both assets and APIs. See [Connecting Source Systems](0b5de87f256f466f95b46d4bcaa52640.html).",
    "title": "Delta Share Data Products Available in the <span class=\"ph uicontrol\">Data Products</span> Collection"
@@ -1900,7 +1900,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844522",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "If you have terms or key performance indicators in other applications, you can import them into the catalog via a Microsoft Excel spreadsheet. See these topics:\n- [Import Glossary Terms](694ecb26f72e4d0ca8b8f64434da881f.html)\n- [View Details About Glossary Term Import](9395b3a445e44ceabf3e0e7ed3bba373.html)\n- [Import Key Performance Indicators](adc41e274a344172a7ebecf8350e6d3a.html)\n- [View Details About Key Performance Indicator Import](07a5c28b138741f0a86d12f99579932f.html)",
    "title": "Import Terms and Key Performance Indicators"
@@ -1923,7 +1923,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844523",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Users with the appropriate privileges can share data products to SAP Customer Data Platform.",
    "title": "Share Data Products to <span class=\"ph pname\" translate=\"no\">SAP Customer Data Platform</span>"
@@ -1946,7 +1946,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844524",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When viewing the Impact and Lineage Analysis diagram for an SAP Analytics Cloud insight, users will be able to see models from the local SAP Datasphere system in the insight's lineage.Note\nFor insights saved before this update, follow these steps to ensure that the lineage appears as expected.\n- In SAP Analytics Cloud, open the insight and save it.\n- Wait a few minutes as the catalog extracts the object's metadata and updates the associated asset.\n- On the catalog search page, search for the insight and view its details page.\n- Select Open Lineage and Impact to see the diagram.\nSee [Catalog Asset Details](afccc581146542c485a52563167e23cc.html).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Models Included in the <span class=\"ph uicontrol\">Impact and Lineage Analysis</span> Diagram for an <span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Insight"
@@ -1969,7 +1969,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844525",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The share status for data products will be monitored for changes on the target system every 24 hours and updated in the catalog as needed:\n- If the data product share is deleted from the target system, the data product's share status is updated to Shareable.\n- If the data product's current share status is In Progress for longer than one hour, but the data product was not shared to the target system, the share status is updated to Shareable.\n- When the data product is shared with the target system and the share status has been In Progress for more than an hour, it is changed to Shared.",
    "title": "Improved Share Status Monitoring for Data Products Shared to Target Systems"
@@ -1992,7 +1992,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844526",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "The following usability improvements will help users with the appropriate permissions manage assets, terms, and key performance indicators (KPIs) and monitor source systems.\n- Updated pages for creating and managing glossary terms and KPIs.\n- Addition of visual cues for areas where AI-generated content is used for enriching content.\n- Updated avatar and colors for all objects in the grid view on the catalog search page.\n- Updated source property groupings for metadata on the asset details page.\n- Renamed the main monitoring page to Metadata Extractions to match the side navigation.\n- Renamed the systems table on the Metadata Extractions page to Remote Systems, plus these other updates:\n- Reorganized the information so that it's easier to locate and understand.\n- Moved system-specific actions from the toolbar to the system's row (for example, Configure is available only for SAP BW systems).\n- Updated the system's details page by adding a toolbar to the header section. Thus, users can perform actions on the system without having to go back to the main monitoring page.\nSee the following topics:\n- [Using Key Performance Indicators](3550f14d4cd74dfaa63ebcaa25b288c2.html)\n- [Create and Manage Key Performance Indicators](ca4f04da3afa4f82b85a0835fceb444b.html)\n- [Define the Key Performance Indicator Template](b3ead0d4944c40ddbdb1ebae239cc69f.html)\n- [Create and Manage a Glossary](e40310c9781848bfad031cce7792f394.html)\n- [Create and Manage Glossary Terms](193336a4eba94c978c08fd2cee625a3e.html)\n- [Catalog Asset Details](afccc581146542c485a52563167e23cc.html)\n- [Connecting Source Systems](0b5de87f256f466f95b46d4bcaa52640.html)",
    "title": "Usability Improvements to Enhance Your Catalog Experience"
@@ -2015,7 +2015,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844527",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When viewing the Impact and Lineage Analysis diagram for an SAP Analytics Cloud story that is based on a live data model, users will be able to see BW Query objects in the story's lineage.\nSee [Catalog Asset Details](afccc581146542c485a52563167e23cc.html).",
    "title": "BW Query Objects Included in the <span class=\"ph uicontrol\">Impact and Lineage Analysis</span> Diagram for an <span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Story"
@@ -2038,7 +2038,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844528",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "When viewing the Impact and Lineage Analysis diagram for a data product that is from an SAP Datasphere source system, users will be able to see tables from the local SAP Datasphere system in the data product's lineage.",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Tables Included in the <span class=\"ph uicontrol\">Impact and Lineage Analysis</span> Diagram for a Data Product"
@@ -2060,7 +2060,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844529",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Revenue Growth Management is a cloud-native solution that supports key revenue growth activities, including key account management, promotion planning, and so on.\nYou can now integrate an instance of SAP Revenue Growth Management with your SAP Business Data Cloud landscape as a data product consumer and provider.",
    "title": "Integration with SAP Revenue Growth Management"
@@ -2083,7 +2083,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844530",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Omnichannel Sales Transfer and Audit captures and processes point-of-sale transactions to gain insight into consumer sales data.\nYou can now integrate an instance of SAP Omnichannel Sales Transfer and Audit with your SAP Business Data Cloud landscape.\nFor more information, see [Integration with SAP Business Data Cloud](https://help.sap.com/docs/SAP_OMNICHANNEL_SALES_TRANSFER_AND_AUDIT/f2f6dd7c31c747eca0472c43914a99cd/5f3b8a7c109c4a37ad526fc018b7e61f.html?ai=true).",
    "title": "Integration with SAP Omnichannel Sales Transfer and Audit"
@@ -2105,7 +2105,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844531",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Reltio is now available as a data unification service within SAP Business Data Cloud. SAP Reltio provides cloud-native master data management that consolidates records from SAP and non-SAP source systems into trusted golden records using AI-powered matching, configurable data governance, and prebuilt AI agents for data stewardship. SAP Reltio is available in three foundation services: analytical edition, operational edition, and business critical edition. For more information, see [Feature Scope Description for SAP Reltio in SAP Business Data Cloud](cda9b9136d09448680f06db89e668bee.html) and [What is SAP Reltio in SAP Business Data Cloud?](https://docs.reltio.com/en)",
    "title": "Integration with <span class=\"ph pname\" translate=\"no\">SAP Reltio in SAP Business Data Cloud</span>"
@@ -2127,7 +2127,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844532",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Now you can update existing mapping configurations for SAP S/4HANA Cloud Private Edition tenants without full re-provisioning, allowing more independence and quicker turnaround of updates. When certificates are expired or about to expire, you can provide a new CSR (Certificate Signing Request) to regenerate certificates. In addition, you can update username and password for SAP S/4HANA Cloud Private Edition system connectivity, update the Cloud Connector location ID, and update the target SAP instance number.\nFor more information, see [Create a PSE and Generate a Certificate Signing Request (CSR)](83c8e7c06f8f48b7a5e5b708633ef963.html).",
    "title": "Mapping Configuration Update for <span class=\"ph pname\" translate=\"no\">SAP S/4HANA Cloud Private Edition</span> Tenants"
@@ -2149,7 +2149,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844533",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "Global CSR signing now uses a fixed OU value instead of a selection from a long list to simplify the certificate signing process and reduce mistakes, aiming for a better user experience.\nSee [Create a PSE and Generate a Certificate Signing Request (CSR)](83c8e7c06f8f48b7a5e5b708633ef963.html)",
    "title": "Global CSR Signing in <span class=\"ph pname\" translate=\"no\">SAP S/4HANA Cloud Private Edition</span>"
@@ -2171,7 +2171,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844534",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP HANA Cloud is a fully managed cloud database platform offered as a service.\nYou can now integrate an instance of SAP HANA Cloud with your SAP Business Data Cloud landscape as a data product consumer.\nSee [Sharing Data Products to SAP Systems](https://help.sap.com/docs/business-data-cloud/governing-and-publishing-data-in-catalog/sharing-data-products-to-sap-systems).",
    "title": "Integration with SAP HANA Cloud"
@@ -2193,7 +2193,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844535",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP SuccessFactors is a cloud-based human capital management software that helps organizations manage their entire workforce, from hiring to retirement.\nYou can now integrate an instance of SAP SuccessFactors with your SAP Business Data Cloud landscape as a data provider.\nSee [Integrating SAP SuccessFactors](b124a3596dad44419a60e258802bdb8c.html).",
    "title": "Integration with SAP SuccessFactors"
@@ -2215,7 +2215,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844536",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP Customer Data Platform is a real-time customer data management solution that unifies, enriches, and activates customer profiles across systems to deliver personalized and privacy-compliant experiences. You can now integrate an instance of\nSAP Customer Data Platform with your SAP Business Data Cloud landscape as a data product consumer.\nSee [Integrating SAP Customer Data Platform](d0613029969a47bd95600452ab04945c.html).",
    "title": "Integration with <span class=\"ph pname\" translate=\"no\">SAP Customer Data Platform</span>"
@@ -2237,7 +2237,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844537",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "SAP S/4HANA Cloud Public Edition is a best-of-breed enterprise software for big data, designed to help you run simple in the digital economy.\nYou can now integrate an instance of SAP S/4HANA Cloud Public Edition with your SAP Business Data Cloud landscape as a data provider.\nSee [Integrating SAP S/4HANA Cloud Public Edition](199aa96707f545e1a36d5c7a01a6472a.html).",
    "title": "Integration with <span class=\"ph pname\" translate=\"no\">SAP S/4HANA Cloud Public Edition</span>"
@@ -2260,7 +2260,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844538",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data cataloging, data integration, data modeling, and general. For more information, see [What's New in SAP Datasphere 2026.22](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.22).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.22"
@@ -2283,7 +2283,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844539",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for business modeling, data cataloging, data integration, and general. For more information, see [What's New in SAP Datasphere 2026.21](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.21).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.21"
@@ -2306,7 +2306,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844540",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data integration, data marketplace, and data modeling. For more information, see [What's New in SAP Datasphere 2026.20](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.20).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.20"
@@ -2329,7 +2329,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844541",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data cataloging, data integration, and data modeling. For more information, see [What's New in SAP Datasphere 2026.19](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.19).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.19"
@@ -2352,7 +2352,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844542",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, business modeling, data integration, data modeling, and space management.For more information, see [What's New in SAP Datasphere 2026.18](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.18).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.18"
@@ -2375,7 +2375,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844543",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data integration, data modeling, space management, and general.\nFor more information, see [What's New in SAP Datasphere 2026.17](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.17).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.17"
@@ -2398,7 +2398,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844544",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data integration, data modeling and space management.\nFor more information, see [What's New in SAP Datasphere 2026.16](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.16).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.16"
@@ -2421,7 +2421,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844545",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data integration, data modeling and space management.\nFor more information, see [What's New in SAP Datasphere 2026.14](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.14).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.14"
@@ -2444,7 +2444,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844546",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data cataloging, data integration, and data modeling.\nFor more information, see [What's New in SAP Datasphere 2026.13](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.13).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.13"
@@ -2467,7 +2467,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844547",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data cataloging, data integration, marketplace, and general.\nFor more information, see [What's New in SAP Datasphere 2026.12](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.12).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.12"
@@ -2490,7 +2490,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844548",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for administration, data integration, data modeling, and space management.\nFor more information, see [What's New in SAP Datasphere 2026.11](https://help.sap.com/whats-new/48017b2cc4834fc6b6cae87097bd9e4d?Version=2026.11).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Datasphere</span> Features for Version 2026.11"
@@ -2513,7 +2513,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844549",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for AI for Planning & Analytics, API, Calendar, Compass, Content Management, Data Acquisition, Data Analyzer, Data Acquisition, Live Data Connections and Integration, Modeling, Planning, Stories, and System Administration.\nFor more information, see [What's New in SAP Analytics Cloud Q3 2026.](https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US&state=PRODUCTION&version=release).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Q3 2026 Release"
@@ -2536,7 +2536,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844550",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "New and changed features are available for AI for Planning & Analytics, API, Calendar, Data Analyzer, Modeling, Planning, Stories, and System Administration.\nFor more information, see [What's New in SAP Analytics Cloud Q2 2026.](https://help.sap.com/whats-new/42e4f84a0e5e458792b1047eaf81c31a?locale=en-US&state=PRODUCTION&version=release).",
    "title": "<span class=\"ph pname\" translate=\"no\">SAP Analytics Cloud</span> Q2 2026 Release"
@@ -2558,7 +2558,7 @@
    },
    "first_seen": "2026-11-03",
    "id": "596844551",
-   "last_seen": "2026-11-04",
+   "last_seen": "2026-11-09",
    "revision": "",
    "text": "A new component version is available for the following SAP HANA Cloud components:\n- 2026.28 (QRC 3/2026) for SAP HANA Cloud, SAP HANA database\n- QRC 3/2026 for SAP HANA Cloud, data lake\nSee [What's New in SAP HANA Cloud](https://help.sap.com/whats-new/2495b34492334456a49084831c2bea4e?locale=en-US&version=hanacloud).\nAction: To use the new component version, you must upgrade your instance. See [Managing SAP HANA Cloud Instances](https://help.sap.com/viewer/9ae9104a46f74a6583ce5182e7fb20cb/hanacloud/en-US/301aae704f19429691318a0610b26aaf.html).",
    "title": "New component version available in <span class=\"ph pname\" translate=\"no\">SAP HANA Cloud</span>"
