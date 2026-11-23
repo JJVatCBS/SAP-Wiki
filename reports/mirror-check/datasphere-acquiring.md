@@ -1,13 +1,13 @@
 # Abgleich GitHub-Spiegel ↔ SAP-Hilfe: SAP Datasphere – Acquiring, Preparing, and Modeling Data
 
-Stand 2026-11-04 · Hilfe: https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/6df42e3675324d73bd35c2e70d46a7ee.html?locale=en-US (buildNo 317) · Spiegel: datasphere/docs/Acquiring-Preparing-Modeling-Data
+Stand 2026-11-23 · Hilfe: https://help.sap.com/docs/SAP_DATASPHERE/c8a54ee704e94e15926551293243fd1d/6df42e3675324d73bd35c2e70d46a7ee.html?locale=en-US (buildNo 322) · Spiegel: datasphere/docs/Acquiring-Preparing-Modeling-Data
 
 | Kennzahl | Wert |
 |---|---|
-| Seiten in der Hilfe | 313 |
-| davon auf GitHub gefunden | 313 |
-| – Text identisch | 62 |
-| – kleine Abweichung (95–99,9 %, z. B. einzelner Satz oder Zahl) | 248 |
+| Seiten in der Hilfe | 312 |
+| davon auf GitHub gefunden | 312 |
+| – Text identisch | 64 |
+| – kleine Abweichung (95–99,9 %, z. B. einzelner Satz oder Zahl) | 245 |
 | – deutliche Abweichung (< 95 %) | 3 |
 | Seiten nur in der Hilfe | 0 |
 | Seiten nur auf GitHub (in diesem Ordner) | 0 |
@@ -30,18 +30,18 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 97% | Columns |
 | 97% | Python Operator Reference |
 | 97% | Create a Calculated Measure |
-| 98% | Creating a Local Table from a CSV File |
 | 98% | Capturing Delta Changes in Your Local Table |
-| 98% | Modify Replication Flow Object Schemas and Settings |
 | 98% | Viewing Object Data |
 | 98% | Replicate Remote Table Data |
 | 98% | Create a Story Filter (Deprecated) |
+| 98% | Creating a Local Table from a CSV File |
 | 98% | Create a Structure for an Analytic Model |
 | 98% | Script Operator Python Reference |
 | 98% | Generate SQL Code with AI |
 | 98% | Create a Count Distinct Measure |
 | 98% | Creating a Local Table (File) |
 | 98% | Create a Text Entity for Attribute Translation |
+| 98% | Modify Replication Flow Object Schemas and Settings |
 | 98% | Maintain Local Table Data |
 | 98% | Create a Calculated Structure Member |
 | 98% | Example for Using the Business Builder |
@@ -49,9 +49,9 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 98% | Unsupported Data Types in a Replication Flow |
 | 98% | Data Types Supported By Local Tables (File) |
 | 98% | Create an SQL View in a Transformation Flow |
-| 98% | MySQL Sources for Replication Flows |
 | 98% | SAP Datasphere Local Table (File) Sources for Replication Flows |
 | 98% | Run a Data Flow |
+| 98% | MySQL Sources for Replication Flows |
 | 98% | Example: Harmonizing County Data for UK Charging Sites |
 | 98% | Namespaces |
 | 98% | Configure the View Output by an Intelligent Lookup |
@@ -63,6 +63,7 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 98% | Creating a Transformation Flow |
 | 98% | Validating View Data |
 | 98% | Create a Restricted Structure Member |
+| 98% | Modeling with Personal Data |
 | 98% | Create an External Hierarchy for Drill-Down |
 | 98% | Modify or Duplicate Remote Tables |
 | 98% | Data Protection and Privacy Tagging |
@@ -72,30 +73,28 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 98% | Define Filter Expressions in a Replication Flow Object Projection |
 | 99% | Example: Adding Latitude and Longitude Data with a Multi-Rule Intelligent Lookup |
 | 99% | Create a Non-Cumulative Measure |
-| 99% | Creating a Replication Flow |
 | 99% | Specify Attributes as Keys, Units, and Other Characteristics |
 | 99% | Add the Target for a Replication Flow |
+| 99% | Creating a Replication Flow |
 | 99% | Create a Calculated Column in a Data Flow |
 | 99% | Reusing Objects as Source or Target in Several Replication Flows |
-| 99% | Organizing Objects in Folders |
-| 99% | Saving and Deploying Objects |
 | 99% | Requesting Access to Data Products |
 | 99% | Creating an Incremental Aggregation on a Target Table in a Transformation Flow on File |
-| 99% | Configure the Run Settings of a Replication Flow |
 | 99% | Converting Currency and Unit Values |
 | 99% | Creating a Transformation Flow in a File Space |
 | 99% | Add a Hierarchy to a Dimension |
 | 99% | Column Data Types |
+| 99% | Configure the Run Settings of a Replication Flow |
+| 99% | Organizing Objects in Folders |
 | 99% | Creating a Python Operator |
 | 99% | Searching for Data Products and Assets in the Catalog |
 | 99% | Natural Language Search |
 | 99% | Repository Explorer |
-| 99% | Google BigQuery Targets for Replication Flows |
 | 99% | Create a Conversion Measure for Units |
 | 99% | Add or Create a Target Table in a Data Flow |
 | 99% | Enabling Currency Conversion with TCUR* Tables and Views |
+| 99% | Google BigQuery Targets for Replication Flows |
 | 99% | Create an Exact Match Rule |
-| 99% | Modeling with Personal Data |
 | 99% | Insert Column Values in a SQL Expression |
 | 99% | Create a Conversion Measure for Currencies |
 | 99% | Previewing, Filtering and Reordering Remote Tables Data |
@@ -108,12 +107,13 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Importing Tables and Views from Sources |
 | 99% | SQL Reference |
 | 99% | Select Task Ports in a Task Chain |
+| 99% | SAP S/4HANA and Other ABAP Sources for Replication Flows |
 | 99% | Modeling Data |
 | 99% | Create a Dimension to Categorize Data |
 | 99% | Creating an Analytic Model |
+| 99% | Create a SQL View in a Transformation Flow on File |
 | 99% | Sharing Entities and Task Chains to Other Spaces |
 | 99% | Create Input Parameters in Task Chains |
-| 99% | Create a SQL View in a Transformation Flow on File |
 | 99% | Installing Marketplace Data Products |
 | 99% | Importing Entities with Semantics from SAP S/4HANA |
 | 99% | Create a Projection in a Data Flow |
@@ -134,7 +134,6 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Previewing Data in Business Builder Objects |
 | 99% | Premium Outbound Integration |
 | 99% | Delete a Replication Flow, or a Replication Object |
-| 99% | SAP Signavio Targets for Replication Flows |
 | 99% | Preview Data in an Analytic Model |
 | 99% | Partitioning Local Tables |
 | 99% | Create a Fiscal Time Dimension |
@@ -143,6 +142,7 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Create a Table in an E/R Model |
 | 99% | Creating a Task Chain |
 | 99% | Installing Data Products |
+| 99% | SAP Signavio Targets for Replication Flows |
 | 99% | Create an Association to Define a Semantic Relationship Between Entities |
 | 99% | Preparing Data |
 | 99% | Run Open SQL Procedures in a Task Chain |
@@ -150,9 +150,9 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Modifying Objects That Have Dependent Objects |
 | 99% | Persist Data in a Graphical or SQL View |
 | 99% | Nest and Share Task Chains |
+| 99% | Saving and Deploying Objects |
 | 99% | Creating an SQL View |
 | 99% | Replace a Source in a Graphical View |
-| 99% | Generate SQL Code with AI in a File Space |
 | 99% | Exposing Data For Consumption |
 | 99% | Add a Source to a Graphical View |
 | 99% | Process Source/Target Changes in a Data Flow |
@@ -180,6 +180,7 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Acquiring and Preparing Data in the Object Store |
 | 99% | Create an Aggregation in a Data Flow |
 | 99% | Sharing Analytic Models to Other Spaces |
+| 99% | Cloud Storage Provider Targets for Replication Flows |
 | 99% | Creating a Business Entity |
 | 99% | Define Attributes |
 | 99% | Reviewing and Restoring Object Versions |
@@ -190,29 +191,29 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 99% | Importing Entities with Semantics from SAP HANA Cloud |
 | 99% | Dimensions in the Analytic Model |
 | 99% | Add a Fact to an Analytic Model |
-| 99% | Cloud Storage Provider Targets for Replication Flows |
 | 99% | Data Product Details |
 | 99% | Run Parallel Tasks in a Task Chain |
 | 99% | Creating an Authorization Scenario |
 | 99% | Creating an Intelligent Lookup |
 | 99% | Create a Script in a Data Flow |
+| 99% | Specify Semantic Types for Measures and Attributes |
 | 99% | Marketplace Data Product Details |
 | 99% | Releasing Stable Views for Consumption |
+| 99% | Cloud Storage Provider Sources for Replication Flows |
 | 99% | Collect Unassigned Fact Records for Inclusion in Aggregations and Visualizations |
 | 99% | Create a Reference Date Variable |
-| 99% | Cloud Storage Provider Sources for Replication Flows |
-| 99% | Data Product Access Details |
 | 99% | SAP Datasphere Targets for Replication Flows |
+| 99% | Data Product Access Details |
 | 99% | Create a Unit Conversion Column in a Graphical View |
 | 99% | Process Unmatched Results |
 | 99% | Import an Object from a Connection or Other Source |
 | 99% | Create an Input Parameter in a Data Flow |
 | 99% | Create a Restricted Measure Variable |
 | 99% | Modeling Data in the Business Builder (Deprecated) |
-| 99% | Specify Semantic Types for Measures and Attributes |
-| 99% | Configure Email Notification for Task Chains and Notification Tasks |
 | 99% | Catalog Asset Details |
+| 99% | Configure Email Notification for Task Chains and Notification Tasks |
 | 99% | Example for a Non-Cumulative Measure |
+| 99% | Rest API Custom Connection Sources for Replication Flows |
 | 99% | Creating a Graphical View |
 | 99% | Create a Union in a Graphical View |
 | 99% | Saving and Deploying Data Objects |
@@ -220,24 +221,21 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 100% | Packages |
 | 100% | Configuring Notifications for Access Requests and Agreements |
 | 100% | Business Builder Start Page |
-| 100% | SAP S/4HANA and Other ABAP Sources for Replication Flows |
 | 100% | Creating a Fact Model |
 | 100% | Sizing, Capacity Planning, and Load Balancing for Replication Flows |
 | 100% | Review the Objects That Depend on Your Table or View |
-| 100% | Rest API Custom Connection Sources for Replication Flows |
 | 100% | Create a Join in a Graphical View |
-| 100% | SAP ECC and SAP BW Sources for Replication Flows |
 | 100% | Define Custom Projection Logic in a Replication Flow |
 | 100% | Run a Task Chain |
 | 100% | Creating a Local Table |
 | 100% | Process Matched Results |
 | 100% | Add a Dimension to an Analytic Model |
-| 100% | Oracle Sources for Replication Flows |
-| 100% | Define Perspectives |
 | 100% | SQL and Script View Source Objects for Replication Flows |
-| 100% | Secure File Transfer Protocol (SFTP) for Replication Flows |
+| 100% | Define Perspectives |
+| 100% | Oracle Sources for Replication Flows |
 | 100% | Process Multiple Match Results |
 | 100% | Non-Cumulative Measures |
+| 100% | Secure File Transfer Protocol (SFTP) for Replication Flows |
 | 100% | Column Properties and Profiling |
 | 100% | Importing Objects with Semantics from SAP Systems |
 | 100% | Define a Key |
@@ -249,7 +247,6 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 | 100% | Functions for Calculated Measures |
 | 100% | Creating an Entity-Relationship Model |
 | 100% | Create an Input Parameter in a Graphical View |
-| 100% | Select Source and Target Connections for Replication Flows |
 | 100% | Exporting Objects to a CSN/JSON File |
 | 100% | Create a Filter Variable |
 | 100% | Obtaining Access to Data Products |
@@ -488,25 +485,6 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 +3 will be displayed as 200, 200.000$ a value of a measure with the formatting settings scale:
 ```
 
-### Creating a Local Table from a CSV File (98%)
-
-`-` GitHub · `+` Hilfe
-
-```diff
--> > this procedure explains how to upload a csv file to create a new local table in sap datasphere with the possibility to perform some data transformations during the upload.
-+this procedure explains how to upload a csv file to create a new local table in sap datasphere with the possibility to perform some data transformations during the upload.
--> > this feature is not supported for file spaces (spaces with a storage type of sap hana data lake files).
--in the side navigation area, select (data builder), select a space if necessary, and select import > import csv file to open the editor.
-+this feature is not supported for file spaces (spaces with a storage type of sap hana data lake files).
-+in the side navigation area, select (data builder), select a space if necessary, and select import import csv file to open the editor.
--> > if you have a source connected via a flowagent or an sap hana smart data integration connector, you may consider the following while loading a csv file:
-+if you have a source connected via a flowagent or an sap hana smart data integration connector, you may consider the following while loading a csv file:
--> > for scenarios where fields contain numeric values with leading zeros, you can follow these steps to import them successfully:
--> > 1.
-+for scenarios where fields contain numeric values with leading zeros, you can follow these steps to import them successfully:
--> 2.
-```
-
 ### Capturing Delta Changes in Your Local Table (98%)
 
 `-` GitHub · `+` Hilfe
@@ -524,25 +502,6 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 -" i " for insert (a new record is added), " u " for update (an existing record gets an updated value), or " a " for upsert (insert records if they do not exist yet in the target table, or update them by primary key if they do exist).
 -when an existing record is deleted other specific change types are used (for example " d ").
 +"i" for insert (a new record is added), "u" for update (an existing record gets an updated value), or "a" for upsert (insert records if they do not exist yet in the target table, or update them by primary key if they do exist).
-```
-
-### Modify Replication Flow Object Schemas and Settings (98%)
-
-`-` GitHub · `+` Hilfe
-
-```diff
--> > this topic explains how to modify replication flow settings in the data builder and monitoring views.
-+this topic explains how to modify replication flow settings in the data builder and monitoring views.
--> > if your replication flow runs at a delta interval, you can deploy your changes at anytime.
-+note if your replication flow runs at a delta interval, you can deploy your changes at anytime.
--> > changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
-+changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
--you can remove objects from an existing replication flow, so that data for these objects will no longer be replicated:
--> > if your replication flow runs at a delta interval, you can deploy your changes at anytime.
-+you can remove objects from an existing replication flow, so that data for these objects will no longer be replicated:note if your replication flow runs at a delta interval, you can deploy your changes at anytime.
--> > changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
-+changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
--adding a column to a replication object changes the target schema and will cause any data already replicated to the target object to be deleted and for replication from the source object to start again.
 ```
 
 ### Viewing Object Data (98%)
@@ -600,6 +559,25 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 -hover over the column which you want to set the filter on, then click (menu) > add story filter to open the filter properties in the side panel.
 +hover over the column which you want to set the filter on, then click (menu) add story filter to open the filter properties in the side panel.
 -> > to edit or remove the filter, hover over the column and click (menu) > edit story filter or remove story filter.
+```
+
+### Creating a Local Table from a CSV File (98%)
+
+`-` GitHub · `+` Hilfe
+
+```diff
+-> > this procedure explains how to upload a csv file to create a new local table in sap datasphere with the possibility to perform some data transformations during the upload.
++this procedure explains how to upload a csv file to create a new local table in sap datasphere with the possibility to perform some data transformations during the upload.
+-> > this feature is not supported for file spaces (spaces with a storage type of sap hana data lake files).
+-in the side navigation area, select (data builder), select a space if necessary, and select import > import csv file to open the editor.
++this feature is not supported for file spaces (spaces with a storage type of sap hana data lake files).
++in the side navigation area, select (data builder), select a space if necessary, and select import import csv file to open the editor.
+-> > when loading a csv file, you must remain on the upload page until the progress bar reaches 100% (approximately 18 seconds).
++when loading a csv file, you must remain on the upload page until the progress bar reaches 100% (approximately 18 seconds).
+-> > if you have a source connected via a flowagent or an sap hana smart data integration connector, you may consider the following while loading a csv file:
++if you have a source connected via a flowagent or an sap hana smart data integration connector, you may consider the following while loading a csv file:
+-> > for scenarios where fields contain numeric values with leading zeros, you can follow these steps to import them successfully:
+-> > 1.
 ```
 
 ### Create a Structure for an Analytic Model (98%)
@@ -704,6 +682,25 @@ Hinweise: Übereinstimmung = Anteil gleicher Wörter in gleicher Reihenfolge; Fo
 +alternatively, click (generate) generate semantics to request sap datasphere to suggest a semantic usage for your entity, identify the uses of your columns, and apply appropriate semantic types to them (see generate semantic information).
 -> > if a column contains personal data or sensitive personal data from a data product, then it is tagged accordingly, and its parent object also displays the appropriate tag (see modeling with personal data).
 +if a column contains personal data or sensitive personal data from a data product, then it is tagged accordingly, and its parent object also displays the appropriate tag (see modeling with personal data).
+```
+
+### Modify Replication Flow Object Schemas and Settings (98%)
+
+`-` GitHub · `+` Hilfe
+
+```diff
+-> > this topic explains how to modify replication flow settings in the data builder and monitoring views.
++this topic explains how to modify replication flow settings in the data builder and monitoring views.
+-> > if your replication flow runs at a delta interval, you can deploy your changes at anytime.
++note if your replication flow runs at a delta interval, you can deploy your changes at anytime.
+-> > changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
++changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
+-you can remove objects from an existing replication flow, so that data for these objects will no longer be replicated:
+-> > if your replication flow runs at a delta interval, you can deploy your changes at anytime.
++you can remove objects from an existing replication flow, so that data for these objects will no longer be replicated:note if your replication flow runs at a delta interval, you can deploy your changes at anytime.
+-> > changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
++changes that are not deployed are not taken into account when transporting the replication flow to another tenant.
+-adding a column to a replication object changes the target schema and will cause any data already replicated to the target object to be deleted and for replication from the source object to start again.
 ```
 
 ### Maintain Local Table Data (98%)
